@@ -1,0 +1,5 @@
+PART_ID          10511-108061301
+PART_NAME   06Cr19Ni10
+DRAW_NO      10511-108.06.13.01
+normals            30*30 方钢管
+TYPE                 GK02
