@@ -189,7 +189,7 @@ static void JumpToApp(void)
 	__set_MSP(*(uint32_t *)BootAddr);
 	
 
-	/* 跳转到系统BootLoader */
+	/* 跳转到系统 */
 	SysMemBootJump(); 
 
 	/* 跳转成功的话，不会执行到这里，用户可以在这里添加代码 */
