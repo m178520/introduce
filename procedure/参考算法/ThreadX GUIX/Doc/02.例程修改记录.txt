@@ -1,0 +1,87 @@
+V1.0    2021-01-31   Eric2013     首发
+--------------------------------------------
+AC5警告修改
+1、ux_device_class_cdc_acm_ioctl.c
+
+	/* Declare the transmission with callback on.  */
+	cdc_acm -> ux_slave_class_cdc_acm_transmission_status = UX_TRUE;
+	
+	/* We are done here.  */
+	return(UX_SUCCESS);
+	
+   //break; 
+
+2、nx_secure_tls_client_handshake.c
+
+	case NX_SECURE_TLS_CLIENT_STATE_ALERT_SENT:
+		/* This means an error was encountered at some point in processing a valid message. At this point
+		   the alert was sent, so just return a status indicating as much. */
+		return(NX_SECURE_TLS_HANDSHAKE_FAILURE);
+		//break;
+		
+3、nx_secure_crypto_rng_self_test.c
+
+//UINT _nx_secure_crypto_rng_self_test();
+
+
+AC6警告修改
+1、nxd_smtp_client.c
+
+    /* Initialize authentication flags.  */
+    carriage_return_linefeed_ptr = (CHAR)0x0;
+	
+2、nxd_ptp_client.c
+
+    if (!(client_ptr -> nx_ptp_client_sync_flags) & NX_PTP_CLIENT_SYNC_CALIBRATED)
+    {
+
+
+3、nxd_dhcpv6_server.c
+
+        if ((dhcpv6_client_ptr -> nx_dhcpv6_option_request.nx_op_request) &&
+            (dhcpv6_client_ptr -> nx_dhcpv6_iana_status.nx_status_code == NX_DHCPV6_STATUS_SUCCESS))
+
+
+Embedded Studio里面的警告：
+
+nxd_bsd.h
+
+#if defined ( __ICCARM__ )
+
+struct timeval
+{
+    time_t          tv_sec;             /* Seconds      */
+    suseconds_t     tv_usec;            /* Microseconds */
+};
+
+#elif defined(__CC_ARM) 
+
+struct timeval
+{
+    time_t          tv_sec;             /* Seconds      */
+    suseconds_t     tv_usec;            /* Microseconds */
+};
+
+#elif  (defined (__ARMCC_VERSION) && (__ARMCC_VERSION >= 6010050))
+
+struct timeval
+{
+    time_t          tv_sec;             /* Seconds      */
+    suseconds_t     tv_usec;            /* Microseconds */
+};
+
+#elif  defined(__GNUC__)
+
+#endif
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

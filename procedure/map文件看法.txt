@@ -1,0 +1,12 @@
+RO-Code                只读代码数据 只存Flash
+RO-Data                 只读数据        只存Flash
+RW （.data）          可读可写       初始化存Flash，运行时复制进入RAM
+ZI-Data（.bss）      零初始化数据 RAM中
+
+char      	8位
+short    	16位
+int         	32位	根据cpu位数更改最小16位
+long      	32位  	最小32位
+longlong 64位
+float	32位
+double	64位	

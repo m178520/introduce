@@ -1,0 +1,16 @@
+cubemx产生代码要选择MDKV5.32，不然产生的会报错
+
+cubemx生成代码会产生一个core->inc->RTE_components.h文件
+keil5也会在MDK-ARM->RTE中产生一个RTE_components.文件
+
+我们的eventrecoder是在keil中添加的，所以需要将keil产生的RTE_components.文件内容复制进入cubemx产生的，
+并添加以下定义
+
+#define CMSIS_device_header "stm32h7xx.h"
+
+/* Keil::Compiler&ARM Compiler:Event Recorder&DAP@1.5.1 */
+#define RTE_Compiler_EventRecorder
+#define RTE_Compiler_EventRecorder_DAP
+/* Keil::Compiler&ARM Compiler:I/O:STDOUT&EVR@1.2.0 */
+#define RTE_Compiler_IO_STDOUT          /* Compiler I/O: STDOUT */
+#define RTE_Compiler_IO_STDOUT_EVR      /* Compiler I/O: STDOUT EVR */
