@@ -1,0 +1,22 @@
+		/**************创建屏幕触摸任务*********************/
+    tx_thread_create(&AppTaskGUITOUCHTCB,              		/* 任务控制块地址 */   
+                       "App Task GUI Touch",              /* 任务名 */
+                       AppTaskGUITouch,                  	/* 启动任务函数地址 */
+                       0,                             		/* 传递给任务的参数 */
+                       &AppTaskGUITOUCHStk[0],            /* 堆栈基地址 */
+                       APP_CFG_TASK_GUI_TOUCH_STK_SIZE,   /* 堆栈空间大小 */  
+                       APP_CFG_TASK_GUI_TOUCH_PRIO,       /* 任务优先级*/
+                       APP_CFG_TASK_GUI_TOUCH_PRIO,       /* 任务抢占阀值 */
+                       TX_NO_TIME_SLICE,               		/* 不开启时间片 */
+                       TX_AUTO_START);                 		/* 创建后立即启动 */
+
+
+threadx中不同优先级间只能抢占，同等优先级可根据TX_NO_TIME_SLICE,设置时间片轮转，
+直接填数值，代表时间片的大小，10就是10个时间片就是10ms
+
+APP_CFG_TASK_GUI_TOUCH_PRIO,   5    /* 任务优先级*/
+APP_CFG_TASK_GUI_TOUCH_PRIO,   5    /* 任务抢占阀值 */
+抢占阈值是小于阈值的才可抢占当前任务优先级的   ，上述的意思就是只有小于5优先级的任务才可抢占
+
+TX_DONT_START创建先挂起，等待条件满足，再开始运行
+

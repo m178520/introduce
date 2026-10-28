@@ -1,0 +1,138 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="project" target="8" version="2">
+  <project Name="project">
+    <configuration
+      CMSIS_CORE="Yes"
+      Name="Common"
+      Target="STM32H743XIHx"
+      arm_architecture="v7EM"
+      arm_core_type="Cortex-M7"
+      arm_endian="Little"
+      arm_fp_abi="Hard"
+      arm_fpu_type="FPv5-D16"
+      arm_interwork="No"
+      arm_linker_heap_size="1024"
+      arm_linker_process_stack_size="512"
+      arm_linker_stack_size="2048"
+      arm_linker_variant="SEGGER"
+      arm_simulator_memory_simulation_parameter="ROM;0x08000000;0x00100000;ROM;0x08100000;0x00100000;RAM;0x20000000;0x00020000;RAM;0x24000000;0x00080000;RAM;0x30000000;0x00048000;RAM;0x38000000;0x00010000"
+      arm_target_debug_interface_type="ADIv5"
+      arm_target_device_name="STM32H743XI"
+      arm_target_interface_type="SWD"
+      c_preprocessor_definitions="CORE_CM7;STM32H743xx;__STM32H7xx_FAMILY;__STM32H743_SUBFAMILY;ARM_MATH_CM7"
+      c_user_include_directories="$(ProjectDir)/CMSIS_5/CMSIS/Include;$(ProjectDir)/STM32H7xx/CMSIS/Device/Include"
+      debug_register_definition_file="$(ProjectDir)/STM32H743x_Registers.xml"
+      debug_target_connection="J-Link"
+      gcc_entry_point="Reset_Handler"
+      link_linker_script_file="$(ProjectDir)/STM32H7xx_Flash.icf"
+      linker_memory_map_file="$(ProjectDir)/STM32H743XIHx_MemoryMap.xml"
+      linker_output_format="bin"
+      linker_printf_fmt_level="long long"
+      linker_printf_fp_enabled="Double"
+      linker_printf_width_precision_supported="Yes"
+      linker_scanf_character_group_matching_enabled="Yes"
+      linker_scanf_fmt_level="long long"
+      linker_scanf_fp_enabled="Yes"
+      macros="DeviceHeaderFile=$(PackagesDir)/STM32H7xx/CMSIS/Device/Include/stm32h7xx.h;DeviceLibraryIdentifier=M7lfdp;DeviceSystemFile=$(PackagesDir)/STM32H7xx/CMSIS/Device/Source/Templates/system_stm32h7xx.c;DeviceVectorsFile=$(PackagesDir)/STM32H7xx/Source/STM32H743x_Vectors.s;DeviceFamily=STM32H7xx;DeviceSubFamily=STM32H743;Target=STM32H743XIHx"
+      project_directory=""
+      project_type="Executable"
+      target_reset_script="Reset();"
+      target_script_file="$(ProjectDir)/STM32H7xx_Target.js"
+      target_trace_initialize_script="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+    <folder Name="CMSIS Files">
+      <file file_name="../../Libraries/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx.c" />
+    </folder>
+    <folder Name="RTT Files">
+      <file file_name="SEGGER_RTT.c" />
+      <file file_name="SEGGER_RTT.h" />
+      <file file_name="SEGGER_RTT_Conf.h" />
+      <file file_name="SEGGER_RTT_SES.c" />
+    </folder>
+    <folder Name="Script Files">
+      <file file_name="STM32H7xx/Scripts/STM32H7xx_Target.js">
+        <configuration Name="Common" file_type="Reset Script" />
+      </file>
+    </folder>
+    <folder Name="User">
+      <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
+      <file file_name="../../User/main.c" />
+    </folder>
+    <folder Name="System Files">
+      <file file_name="SEGGER_THUMB_Startup.s" />
+      <file file_name="STM32H7xx/Source/STM32H7xx_Startup.s" />
+      <file file_name="STM32H7xx/Source/STM32H743x_Vectors.s">
+        <configuration Name="Common" file_type="Assembly" />
+      </file>
+    </folder>
+    <folder Name="BSP">
+      <file file_name="../../User/bsp/src/bsp_dwt.c" />
+      <file file_name="../../User/bsp/src/bsp_fmc_io.c" />
+      <file file_name="../../User/bsp/src/bsp_fmc_sdram.c" />
+      <file file_name="../../User/bsp/src/bsp_i2c_eeprom_24xx.c" />
+      <file file_name="../../User/bsp/src/bsp_i2c_gpio.c" />
+      <file file_name="../../User/bsp/src/bsp_key.c" />
+      <file file_name="../../User/bsp/src/bsp_led.c" />
+      <file file_name="../../User/bsp/src/bsp_tft_h7.c" />
+      <file file_name="../../User/bsp/src/bsp_tft_lcd.c" />
+      <file file_name="../../User/bsp/src/bsp_tim_pwm.c" />
+      <file file_name="../../User/bsp/src/bsp_timer.c" />
+      <file file_name="../../User/bsp/src/bsp_ts_ft5x06.c" />
+      <file file_name="../../User/bsp/src/bsp_ts_gt811.c" />
+      <file file_name="../../User/bsp/src/bsp_ts_gt911.c" />
+      <file file_name="../../User/bsp/src/bsp_ts_stmpe811.c" />
+      <file file_name="../../User/bsp/src/bsp_ts_touch.c" />
+      <file file_name="../../User/bsp/src/bsp_uart_fifo.c" />
+      <file file_name="../../User/bsp/bsp.c" />
+      <file file_name="../../User/bsp/bsp.h" />
+    </folder>
+    <folder Name="HAL_Driver">
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_dma.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_dma2d.c" />
+      <file file_name="../../User/bsp/stm32h7xx_hal_conf.h" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c" />
+      <file file_name="../../Libraries/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sram.c" />
+    </folder>
+    <folder Name="Fonts">
+      <file file_name="../../User/fonts/asc12.c" />
+      <file file_name="../../User/fonts/asc16.c" />
+      <file file_name="../../User/fonts/asc24.c" />
+      <file file_name="../../User/fonts/asc32.c" />
+      <file file_name="../../User/fonts/fonts.h" />
+      <file file_name="../../User/fonts/hz12.c" />
+      <file file_name="../../User/fonts/hz16.c" />
+      <file file_name="../../User/fonts/hz24.c" />
+      <file file_name="../../User/fonts/hz32.c" />
+      <file file_name="../../User/fonts/ra8875_asc_width.c" />
+    </folder>
+    <configuration
+      CMSIS_CORE="Yes"
+      Name="Debug"
+      c_preprocessor_definitions="USE_HAL_DRIVER;STM32H743xx"
+      c_user_include_directories="..\\..\\Libraries\\CMSIS\\Include;..\\..\\Libraries\\CMSIS\\Device\\ST\\STM32H7xx\\Include;..\\..\\Libraries\\STM32H7xx_HAL_Driver\\Inc;..\\..\\User\\bsp\\inc;..\\..\\User;..\\..\\User\\bsp;..\\..\\User\\fonts"
+      gcc_debugging_level="Level 2"
+      gcc_optimization_level="Level 0" />
+  </project>
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="None" />
+</solution>

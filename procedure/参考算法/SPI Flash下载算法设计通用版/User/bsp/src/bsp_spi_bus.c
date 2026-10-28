@@ -38,14 +38,14 @@ void bsp_InitSPIBus(void)
 	/* SPI CS ##############################*/
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;	/* 设置推挽输出 */
 	GPIO_InitStruct.Pull = GPIO_NOPULL;			/* 上下拉电阻不使能 */
-	GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;  	/* GPIO速度等级 */	
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;  	/* GPIO速度等级 */	
 	GPIO_InitStruct.Pin = SF_CS_PIN;	
 	HAL_GPIO_Init(SF_CS_GPIO, &GPIO_InitStruct);	
 	
 	/* SPI SCK ##############################*/
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
-	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
 	GPIO_InitStruct.Pin = PIN_SCK;
 	HAL_GPIO_DeInit(PORT_SCK, PIN_SCK);
 	HAL_GPIO_Init(PORT_SCK, &GPIO_InitStruct);
@@ -53,7 +53,7 @@ void bsp_InitSPIBus(void)
 	/* SPI MISO ##############################*/
 	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
-	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
 	GPIO_InitStruct.Pin = PIN_MISO;
 	HAL_GPIO_DeInit(PORT_MISO, PIN_MISO);
 	HAL_GPIO_Init(PORT_MISO, &GPIO_InitStruct);
@@ -61,7 +61,7 @@ void bsp_InitSPIBus(void)
 	/* SPI MOSI ##############################*/
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pull = GPIO_NOPULL;
-	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
 	GPIO_InitStruct.Pin = PIN_MOSI;
 	HAL_GPIO_DeInit(PORT_MOSI, PIN_MOSI);
 	HAL_GPIO_Init(PORT_MOSI, &GPIO_InitStruct);

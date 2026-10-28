@@ -43,7 +43,7 @@ int SystemClock_Config(void);
 *********************************************************************************************************
 */
 #define CMD_PAGEWR    0x02  		/* Ò³±à³Ì Page Program */
-#define CMD_DISWR	  0x04			/* ½ûÖ¹Ð´ Write Disable */
+#define CMD_DISWR	  	0x04			/* ½ûÖ¹Ð´ Write Disable */
 #define CMD_WREN      0x06			/* Ð´Ê¹ÄÜÃüÁî Write Enable */
 #define CMD_READ      0x03  		/* ¶ÁÊý¾ÝÇøÃüÁî Read Data */
 #define CMD_RDSR      0x05			/* ¶Á×´Ì¬¼Ä´æÆ÷ÃüÁî Read Status Register-1 */
@@ -58,30 +58,30 @@ int SystemClock_Config(void);
 *********************************************************************************************************
 */
 /* SPI CSÆ¬Ñ¡ *******/
-#define SF_CS_CLK_ENABLE() 			__HAL_RCC_GPIOD_CLK_ENABLE()
-#define SF_CS_GPIO					GPIOD
-#define SF_CS_PIN					GPIO_PIN_13
+#define SF_CS_CLK_ENABLE() 			__HAL_RCC_GPIOB_CLK_ENABLE()
+#define SF_CS_GPIO					GPIOB
+#define SF_CS_PIN					GPIO_PIN_6
 #define SF_CS_0()					SF_CS_GPIO->BSRR = ((uint32_t)SF_CS_PIN << 16U) 
 #define SF_CS_1()					SF_CS_GPIO->BSRR = SF_CS_PIN
 
 /* SPI SCKÊ±ÖÓ *******/
 #define RCC_SCK_CLK_ENABLE()  		__HAL_RCC_GPIOB_CLK_ENABLE()
 #define PORT_SCK					GPIOB
-#define PIN_SCK						GPIO_PIN_3
+#define PIN_SCK						GPIO_PIN_2
 #define SCK_0()						PORT_SCK->BSRR = ((uint32_t)PIN_SCK << 16U)
 #define SCK_1()						PORT_SCK->BSRR = PIN_SCK
 
 /* SPI MOSI *********/
-#define RCC_MOSI_CLK_ENABLE()  		__HAL_RCC_GPIOB_CLK_ENABLE()
-#define PORT_MOSI					GPIOB
-#define PIN_MOSI					GPIO_PIN_5
+#define RCC_MOSI_CLK_ENABLE()  		__HAL_RCC_GPIOF_CLK_ENABLE()
+#define PORT_MOSI					GPIOF
+#define PIN_MOSI					GPIO_PIN_8
 #define MOSI_0()					PORT_MOSI->BSRR = ((uint32_t)PIN_MOSI << 16U)
 #define MOSI_1()					PORT_MOSI->BSRR = PIN_MOSI
 
 /* SPI MISO *********/
-#define RCC_MISO_CLK_ENABLE()  		__HAL_RCC_GPIOB_CLK_ENABLE()
-#define PORT_MISO					GPIOB
-#define PIN_MISO					GPIO_PIN_4
+#define RCC_MISO_CLK_ENABLE()  		__HAL_RCC_GPIOF_CLK_ENABLE()
+#define PORT_MISO					GPIOF
+#define PIN_MISO					GPIO_PIN_9
 #define MISO_IS_HIGH()	        	(HAL_GPIO_ReadPin(PORT_MISO, PIN_MISO) == GPIO_PIN_SET)
 
 #endif

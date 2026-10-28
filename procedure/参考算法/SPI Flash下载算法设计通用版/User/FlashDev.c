@@ -20,10 +20,10 @@
 #ifdef FLASH_MEM
 struct FlashDevice const FlashDevice  =  {
     FLASH_DRV_VERS,               /* 驱动版本，勿修改，这个是MDK定的 */
-    "ARMFLY_STM32H743_SPI_25Q64", /* 算法名，添加算法到MDK安装目录会显示此名字 */
+    "ARMFLY_STM32H743_SPI_25Q256", /* 算法名，添加算法到MDK安装目录会显示此名字 */
     EXTSPI,                       /* 设备类型 */
     0xC0000000,                   /* Flash起始地址 */
-    8 * 1024 * 1024,              /* Flash大小，8MB */
+    32 * 1024 * 1024,              /* Flash大小，32MB */
     4096,                         /* 编程页大小 */
     0,                            /* 保留，必须为0 */
     0xFF,                         /* 擦除后的数值 */
