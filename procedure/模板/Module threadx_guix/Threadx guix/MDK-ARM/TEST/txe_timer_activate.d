@@ -1,0 +1,5 @@
+test/txe_timer_activate.o: \
+  ..\Middlewares\ST\threadx\common\src\txe_timer_activate.c \
+  ..\Middlewares\ST\threadx\common\inc\tx_api.h \
+  ..\Middlewares\ST\threadx\ports_module\cortex_m7\ac6\inc\tx_port.h \
+  ..\Core\Inc\tx_user.h ..\Middlewares\ST\threadx\common\inc\tx_timer.h
