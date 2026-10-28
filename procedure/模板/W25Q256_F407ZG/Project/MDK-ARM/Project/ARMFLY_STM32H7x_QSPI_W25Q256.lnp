@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp.sp
+"project\loader_src.o"
+"project\dev_inf.o"
+"project\bsp.o"
+"project\bsp_spi_bus.o"
+"project\bsp_spi_flash.o"
+"project\stm32f4xx_hal_rcc.o"
+"project\stm32f4xx_hal_rcc_ex.o"
+"project\stm32f4xx_hal_flash.o"
+"project\stm32f4xx_hal_flash_ex.o"
+"project\stm32f4xx_hal_flash_ramfunc.o"
+"project\stm32f4xx_hal_gpio.o"
+"project\stm32f4xx_hal_dma_ex.o"
+"project\stm32f4xx_hal_dma.o"
+"project\stm32f4xx_hal_pwr.o"
+"project\stm32f4xx_hal_pwr_ex.o"
+"project\stm32f4xx_hal_cortex.o"
+"project\stm32f4xx_hal.o"
+"project\stm32f4xx_hal_exti.o"
+"project\system_stm32f4xx.o"
+--strict --scatter ".\Target.lin"
+--diag_suppress L6305 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "ARMFLY_STM32H7x_QSPI_W25Q256.map" -o Project\ARMFLY_STM32H7x_QSPI_W25Q256.axf

@@ -1,0 +1,64 @@
+(Connection lost)
+00> I/elog     [0000-00-00T00:00:00.001] EasyLogger V2.2.99 is initialize success.
+00> I/SYS_INFO [0000-00-00T00:00:00.001] Library Name: lib_core, Version: 1.1.2, Build Time: Aug 11 2026 08:06:03
+00> I/SYS_INFO [0000-00-00T00:00:00.001] Library Name: lib_tool, Version: 1.0.1, Build Time: Oct 23 2026 15:41:46
+00> I/SYS_INFO [0000-00-00T00:00:00.001] Library Name: lib_fml, Version: 1.1.2, Build Time: Sep  8 2026 13:48:30
+00> I/SYS_INFO [0000-00-00T00:00:00.001] Library Name: lib_cmd, Version: 1.0.6, Build Time: Aug 31 2026 13:37:33
+00> I/SYS_INFO [0000-00-00T00:00:00.001] Library Name: dwc, Version: 1.0.0, Build Time: Oct 23 2026 16:32:24
+00> I/SYS      [2000-02-20T06:31:40.019] RETAIN LOAD
+00> .TEST(FieldUtilTest, FieldWrite_EN_False): PASS
+00> .TEST(FieldUtilTest, FieldWrite_NULL_Ptr): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Index_Negative): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Index_OverUpper): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_Word_Normal): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_Real): PASS
+00> .TEST(FieldUtilTest, FieldWrite_NotImplType_DT): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Default_BadType): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_Bool): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_Byte): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_DWord): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_LWord): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_Int): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_DInt_Min): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_LReal): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Index_Zero): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Index_LastElement): PASS
+00> .TEST(FieldUtilTest, FieldWrite_MemLen_Zero): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_Date): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_Char): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_USInt): PASS
+00> .TEST(FieldUtilTest, FieldWrite_Write_SInt): PASS
+00> .TEST(FieldUtilTest, FieldWrite_NotImplType_LTOD): PASS
+00> .TEST(FieldUtilTest, FieldWrite_NotImplType_LDT): PASS
+00> .TEST(FieldUtilTest, SET_BF_BITS_InvalidArg): PASS
+00> .TEST(FieldUtilTest, SET_BF_BITS_Normal_CrossByte): PASS
+00> .TEST(FieldUtilTest, SET_BF_BITS_Normal_SingleByte): PASS
+00> .TEST(FieldUtilTest, SET_BF_BITS_Count_One): PASS
+00> .TEST(FieldUtilTest, SET_BF_BITS_Count_Zero): PASS
+00> .TEST(FieldUtilTest, SET_BF_BITS_BitStart_LastBit): PASS
+00> .TEST(FieldUtilTest, SET_BF_BITS_Count_Gt8): PASS
+00> .TEST(FieldUtilTest, SET_BF_BITS_OnExistingData): PASS
+00> .TEST(FieldUtilTest, RESET_BF_BITS_InvalidArg): PASS
+00> .TEST(FieldUtilTest, RESET_BF_BITS_Normal_CrossByte): PASS
+00> .TEST(FieldUtilTest, RESET_BF_BITS_Normal_SingleByte): PASS
+00> .TEST(FieldUtilTest, RESET_BF_BITS_Count_One): PASS
+00> .TEST(FieldUtilTest, RESET_BF_BITS_Count_Zero): PASS
+00> .TEST(FieldUtilTest, RESET_BF_BITS_BitStart_LastBit): PASS
+00> .TEST(FieldUtilTest, RESET_BF_BITS_Count_Gt8): PASS
+00> .TEST(FieldUtilTest, RESET_BF_BITS_OnExistingData): PASS
+00> .TEST(FieldUtilTest, Swap_EN_False): PASS
+00> .TEST(FieldUtilTest, Swap_NULL_Ptr): PASS
+00> .TEST(FieldUtilTest, Swap_WORD): PASS
+00> .TEST(FieldUtilTest, Swap_DWORD): PASS
+00> .TEST(FieldUtilTest, Swap_LWORD): PASS
+00> .TEST(FieldUtilTest, Swap_BadSize): PASS
+00> .TEST(FieldUtilTest, Swap_Size_Zero): PASS
+00> .TEST(FieldUtilTest, Swap_WORD_Palindrome): PASS
+00> .TEST(FieldUtilTest, Swap_WORD_Zero): PASS
+00> .TEST(FieldUtilTest, Swap_DWORD_Palindrome): PASS
+00> .TEST(FieldUtilTest, Swap_LWORD_Zero): PASS
+00> .TEST(FieldUtilTest, Swap_LWORD_AllOnes): PASS
+00> 
+00> -----------------------
+00> 52 Tests 0 Failures 0 Ignored 
+00> OK

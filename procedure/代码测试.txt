@@ -1,0 +1,53 @@
+将待测函数test.c文件 和 模板test_sc文件 给AI,让AI给写各种测试的代码
+
+移植unity_fixture只需要unity.c 和Unity\extras\fixture\src\unity_fixture.c文件
+UnityTestRunner中最后添加，便可打印出完整信息
+void UnityTestRunner(unityfunction* setup,
+                     unityfunction* testBody,
+                     unityfunction* teardown,
+                     const char*    printableName,
+                     const char*    group,
+                     const char*    name,
+                     const char*    file,
+                     unsigned int   line) {
+  if(testSelected(name) && groupSelected(group)) {
+    Unity.TestFile              = file;
+    Unity.CurrentTestName       = printableName;
+    Unity.CurrentTestLineNumber = line;
+    if(UnityFixture.Verbose) {
+      UnityPrint(printableName);
+#ifndef UNITY_REPEAT_TEST_NAME
+      Unity.CurrentTestName = NULL;
+#endif
+    } else if(UnityFixture.Silent) {
+      /* Do Nothing */
+    } else {
+      UNITY_OUTPUT_CHAR('.');
+    }
+
+    Unity.NumberOfTests++;
+    UnityPointer_Init();
+
+    UNITY_EXEC_TIME_START();
+
+    if(TEST_PROTECT()) {
+      setup();
+      testBody();
+    }
+    if(TEST_PROTECT()) {
+      teardown();
+    }
+    if(TEST_PROTECT()) {
+      UnityPointer_UndoAllSets();
+    }
+    // 添加打印pass
+    if(!Unity.CurrentTestFailed) {
+      UnityPrint(printableName);
+      UnityPrint(": PASS");
+      UNITY_PRINT_EOL();
+    }
+    UnityConcludeFixtureTest();
+  }
+}
+
+如果需要时间戳，再添加elog
