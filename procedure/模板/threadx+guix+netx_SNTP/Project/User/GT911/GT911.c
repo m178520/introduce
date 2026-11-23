@@ -1,6 +1,4 @@
-#include "GT911.h"
-#include <stdio.h>
-#include "Touch.h"
+#include "user_global.h"
 
 GT911_T g_GT911;
 

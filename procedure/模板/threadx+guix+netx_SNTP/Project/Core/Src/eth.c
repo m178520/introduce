@@ -42,7 +42,7 @@ ETH_BufferTypeDef Txbuffer[ETH_TX_DESC_CNT * 2U];
 ETH_TxPacketConfig TxConfig;
 
 /* USER CODE BEGIN 0 */
-#include "pcf8574.h"
+#include "user_global.h"
 #include "eth.h"
 #include "tx_api.h"
 /* USER CODE END 0 */

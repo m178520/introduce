@@ -3,7 +3,7 @@
 <title>Static Call Graph - [Project\Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image Project\Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Mon Nov 23 10:46:38 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6240002: Last Updated: Mon Nov 23 14:03:30 2026
 <BR><P>
 <H3>Maximum Stack Usage =       1340 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -934,9 +934,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[3c1]"></a>rand</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, rand.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_bind
-<LI><a href="#[3d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_enable
+<BR><BR>[Called By]<UL><LI><a href="#[3d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_enable
 <LI><a href="#[3c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_add_randomize
+<LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_bind
 </UL>
 
 <P><STRONG><a name="[4dc]"></a>srand</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, rand.o(.text), UNUSED)
@@ -1003,11 +1003,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[305]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_image_reader_pixel_write_callback_set
 <LI><a href="#[2ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_image_reader_colorspace_convert
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_allocate
-<LI><a href="#[44f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_create_time_request_packet
 <LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_create
 <LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_arp_enable
 <LI><a href="#[3c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_create
 <LI><a href="#[3e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_send_request_internal
+<LI><a href="#[44f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_create_time_request_packet
 <LI><a href="#[42c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_create
 </UL>
 
@@ -1257,7 +1257,6 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetTIMOutPWM
 <LI><a href="#[4b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_GetAFofTIM
 <LI><a href="#[4b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_RCC_TIM_Enable
-<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ReadClock
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WriteClock
 <LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_MspInit
 <LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_LTDC_MspInit
@@ -1268,6 +1267,7 @@ Global Symbols
 <LI><a href="#[215]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FMC_Init
 <LI><a href="#[212]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA2D_Init
 <LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ReadClock
 </UL>
 
 <P><STRONG><a name="[178]"></a>EventRecordData</STRONG> (Thumb, 388 bytes, Stack size 56 bytes, eventrecorder.o(.text.EventRecordData))
@@ -1690,12 +1690,12 @@ Global Symbols
 <LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_ConfigSupply
-<LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_WritePHYRegister
-<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_ReadPHYRegister
 <LI><a href="#[1d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCCEx_PLL3_Config
 <LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCCEx_PLL2_Config
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RTC_WaitForSynchro
 <LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterInitMode
+<LI><a href="#[1c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_WritePHYRegister
+<LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_ReadPHYRegister
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lan8742_io_get_tick
 <LI><a href="#[3f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_driver_enable
 </UL>
@@ -3427,8 +3427,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 500<LI>Call Chain = _gx_display_driver_generic_aliased_wide_arc_draw &rArr; _gx_display_driver_generic_simple_aliased_wide_arc_draw &rArr; _gx_display_driver_arc_clipping_get &rArr; _gx_utility_circle_point_get &rArr; _gx_utility_math_cos &rArr; _gx_utility_math_sin
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_utility_circle_point_get
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_filled_circle_draw
 <LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_simple_aliased_wide_arc_draw
+<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_filled_circle_draw
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gx_display_driver_565rgb_setup.o(.text._gx_display_driver_565rgb_setup)
 </UL>
@@ -3452,10 +3452,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = _gx_display_driver_generic_aliased_wide_line_draw &rArr; _gx_display_driver_generic_wide_line_points_calculate &rArr; _gx_utility_math_sqrt
 </UL>
 <BR>[Calls]<UL><LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_utility_rectangle_overlap_detect
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_filled_circle_draw
 <LI><a href="#[2cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_wide_line_fill
 <LI><a href="#[2cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_rotated_wide_line_fill
 <LI><a href="#[2cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_wide_line_points_calculate
+<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_filled_circle_draw
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gx_display_driver_565rgb_setup.o(.text._gx_display_driver_565rgb_setup)
 </UL>
@@ -3686,9 +3686,9 @@ Global Symbols
 <P><STRONG><a name="[2e2]"></a>_gx_icon_background_draw</STRONG> (Thumb, 330 bytes, Stack size 40 bytes, gx_icon_background_draw.o(.text._gx_icon_background_draw))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = _gx_icon_background_draw &rArr; _gx_widget_background_draw &rArr; _gx_widget_border_draw &rArr; _gx_canvas_rectangle_draw &rArr; _gx_canvas_line_draw &rArr; _gx_utility_rectangle_overlap_detect
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_context_pixelmap_get
-<LI><a href="#[28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_pixelmap_draw
+<BR>[Calls]<UL><LI><a href="#[28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_pixelmap_draw
 <LI><a href="#[2e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_background_draw
+<LI><a href="#[2e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_context_pixelmap_get
 <LI><a href="#[2e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_context_fill_set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_icon_draw
@@ -4132,10 +4132,10 @@ Global Symbols
 <P><STRONG><a name="[256]"></a>_gx_system_event_send</STRONG> (Thumb, 146 bytes, Stack size 32 bytes, gx_system_event_send.o(.text._gx_system_event_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 324<LI>Call Chain = _gx_system_event_send &rArr; _gx_system_pen_flick_test &rArr; _tx_queue_send &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_pen_speed_update
-<LI><a href="#[343]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_pen_flick_test
+<BR>[Calls]<UL><LI><a href="#[343]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_pen_flick_test
 <LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_queue_send
 <LI><a href="#[341]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_pen_speed_init
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_pen_speed_update
 </UL>
 <BR>[Called By]<UL><LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_system_event_send
 <LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_event_generate
@@ -4355,9 +4355,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[285]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_error_process
 <LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_dirty_mark
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_canvas_refresh
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_event_dispatch
 <LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_timer_update
 <LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_queue_receive
+<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_event_dispatch
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gx_system_initialize.o(.text._gx_system_initialize)
 </UL>
@@ -4535,8 +4535,8 @@ Global Symbols
 <P><STRONG><a name="[35d]"></a>_gx_text_button_text_draw</STRONG> (Thumb, 126 bytes, Stack size 48 bytes, gx_text_button_text_draw.o(.text._gx_text_button_text_draw))
 <BR><BR>[Stack]<UL><LI>Max Depth = 340<LI>Call Chain = _gx_text_button_text_draw &rArr; _gx_widget_text_draw_ext &rArr; _gx_canvas_text_draw_ext &rArr; _gx_canvas_glyphs_draw &rArr; _gx_canvas_generic_glyphs_draw &rArr; _gx_utility_utf8_string_character_get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_text_button_text_get_ext
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_text_draw_ext
+<BR>[Calls]<UL><LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_text_draw_ext
+<LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_text_button_text_get_ext
 </UL>
 <BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_text_button_draw
 </UL>
@@ -4610,7 +4610,6 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[266]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_utility_easing_function_calculate
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_ellipse_fill
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_circle_fill
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_filled_circle_draw
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_wide_ellipse_draw
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_wide_circle_draw
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_arc_draw
@@ -4618,6 +4617,7 @@ Global Symbols
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_circle_draw
 <LI><a href="#[2cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_wide_line_points_calculate
 <LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_simple_aliased_wide_arc_draw
+<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_filled_circle_draw
 </UL>
 
 <P><STRONG><a name="[280]"></a>_gx_utility_rectangle_combine</STRONG> (Thumb, 124 bytes, Stack size 8 bytes, gx_utility_rectangle_combine.o(.text._gx_utility_rectangle_combine))
@@ -4705,7 +4705,6 @@ Global Symbols
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_arc_fill
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_arc_draw
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_circle_draw
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_filled_circle_draw
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_wide_ellipse_draw
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_wide_circle_draw
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_arc_draw
@@ -4717,6 +4716,7 @@ Global Symbols
 <LI><a href="#[2d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_simple_pie_fill
 <LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_simple_aliased_wide_arc_draw
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_fixed_point_line_draw
+<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_generic_aliased_filled_circle_draw
 <LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_top_root_find
 <LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_window_execute
 </UL>
@@ -4728,8 +4728,8 @@ Global Symbols
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_hide
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_16bpp_canvas_copy
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_display_driver_565rgb_canvas_blend
-<LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_top_root_find
 <LI><a href="#[337]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_dirty_entry_shift
+<LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_top_root_find
 <LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_shift_helper
 <LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_scroll_shift_helper
 <LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gx_chromeart_canvas_copy
@@ -4789,14 +4789,14 @@ Global Symbols
 <P><STRONG><a name="[26a]"></a>_gx_widget_block_move</STRONG> (Thumb, 268 bytes, Stack size 56 bytes, gx_widget_block_move.o(.text._gx_widget_block_move))
 <BR><BR>[Stack]<UL><LI>Max Depth = 492<LI>Call Chain = _gx_widget_block_move &rArr; _gx_system_dirty_partial_add &rArr; _gx_system_unlock &rArr; _tx_mutex_put &rArr; _tx_mutex_priority_change &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_width_get
-<LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_block_move
+<BR>[Calls]<UL><LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_block_move
 <LI><a href="#[267]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_dirty_partial_add
 <LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_unlock
 <LI><a href="#[262]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_lock
 <LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_drawing_complete
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_drawing_initiate
 <LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_height_get
+<LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_width_get
 <LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_canvas_get
 </UL>
 <BR>[Called By]<UL><LI><a href="#[265]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_animation_update
@@ -5109,11 +5109,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_show
 <LI><a href="#[36e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_unlink
 </UL>
-<BR>[Called By]<UL><LI><a href="#[35c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_text_button_create
-<LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_button_create
+<BR>[Called By]<UL><LI><a href="#[26e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_button_create
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_attach
 <LI><a href="#[26f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_create
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_icon_create
+<LI><a href="#[35c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_text_button_create
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_window_create
 <LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_prompt_create
 </UL>
@@ -5216,14 +5216,14 @@ Global Symbols
 <P><STRONG><a name="[32c]"></a>_gx_widget_text_draw_ext</STRONG> (Thumb, 332 bytes, Stack size 48 bytes, gx_widget_text_draw.o(.text._gx_widget_text_draw_ext))
 <BR><BR>[Stack]<UL><LI>Max Depth = 292<LI>Call Chain = _gx_widget_text_draw_ext &rArr; _gx_canvas_text_draw_ext &rArr; _gx_canvas_glyphs_draw &rArr; _gx_canvas_generic_glyphs_draw &rArr; _gx_utility_utf8_string_character_get
 </UL>
-<BR>[Calls]<UL><LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_width_get
-<LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_context_brush_get
+<BR>[Calls]<UL><LI><a href="#[37b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_context_brush_get
 <LI><a href="#[291]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_text_draw_ext
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_string_width_get_ext
 <LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_border_width_get
 <LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_height_get
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_context_line_color_set
 <LI><a href="#[298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_context_font_set
+<LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_width_get
 </UL>
 <BR>[Called By]<UL><LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_prompt_text_draw
 <LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_text_button_text_draw
@@ -5257,13 +5257,13 @@ Global Symbols
 <P><STRONG><a name="[37d]"></a>_gx_window_border_draw</STRONG> (Thumb, 312 bytes, Stack size 64 bytes, gx_window_border_draw.o(.text._gx_window_border_draw))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = _gx_window_border_draw &rArr; _gx_widget_border_draw &rArr; _gx_canvas_rectangle_draw &rArr; _gx_canvas_line_draw &rArr; _gx_utility_rectangle_overlap_detect
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_context_pixelmap_get
-<LI><a href="#[28d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_pixelmap_tile
+<BR>[Calls]<UL><LI><a href="#[28d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_pixelmap_tile
 <LI><a href="#[28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_canvas_pixelmap_draw
 <LI><a href="#[26d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_border_draw
 <LI><a href="#[268]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_utility_rectangle_overlap_detect
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_client_get
 <LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_border_width_get
+<LI><a href="#[2e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_context_pixelmap_get
 <LI><a href="#[2e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_context_fill_set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[37c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_window_background_draw
@@ -5317,10 +5317,10 @@ Global Symbols
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_canvas_refresh
 <LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_event_send
 <LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_detach
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_event_dispatch
 <LI><a href="#[34b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_widget_status_remove
 <LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_timer_update
 <LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_queue_receive
+<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_event_dispatch
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_window_execute
 </UL>
@@ -5862,7 +5862,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_arp_packet_receive
 </UL>
 
-<P><STRONG><a name="[3c6]"></a>_nx_dhcp_create</STRONG> (Thumb, 612 bytes, Stack size 88 bytes, nxd_dhcp_client.o(.text._nx_dhcp_create))
+<P><STRONG><a name="[3c6]"></a>_nx_dhcp_create</STRONG> (Thumb, 614 bytes, Stack size 88 bytes, nxd_dhcp_client.o(.text._nx_dhcp_create))
 <BR><BR>[Stack]<UL><LI>Max Depth = 580 + Unknown Stack Size
 <LI>Call Chain = _nx_dhcp_create &rArr; _txe_mutex_delete &rArr; _tx_mutex_delete &rArr; _tx_mutex_put &rArr; _tx_mutex_priority_change &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
@@ -5910,16 +5910,16 @@ Global Symbols
 <LI><a href="#[3e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_packet_process
 </UL>
 
-<P><STRONG><a name="[3dd]"></a>_nx_dhcp_interface_start</STRONG> (Thumb, 412 bytes, Stack size 32 bytes, nxd_dhcp_client.o(.text._nx_dhcp_interface_start))
+<P><STRONG><a name="[3dd]"></a>_nx_dhcp_interface_start</STRONG> (Thumb, 414 bytes, Stack size 32 bytes, nxd_dhcp_client.o(.text._nx_dhcp_interface_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 540<LI>Call Chain = _nx_dhcp_interface_start &rArr; _nx_udp_socket_bind &rArr; _nx_udp_free_port_find &rArr; _tx_mutex_put &rArr; _tx_mutex_priority_change &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_thread_resume
+<BR>[Calls]<UL><LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_put
+<LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_get
+<LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_record_find
+<LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_thread_resume
 <LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_bind
 <LI><a href="#[3e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_timer_activate
 <LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
-<LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_put
-<LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_get
-<LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_record_find
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_start
 </UL>
@@ -6189,7 +6189,7 @@ Global Symbols
 <LI><a href="#[428]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_icmpv6_send_rs
 </UL>
 
-<P><STRONG><a name="[42c]"></a>_nx_ip_create</STRONG> (Thumb, 662 bytes, Stack size 96 bytes, nx_ip_create.o(.text._nx_ip_create))
+<P><STRONG><a name="[42c]"></a>_nx_ip_create</STRONG> (Thumb, 664 bytes, Stack size 96 bytes, nx_ip_create.o(.text._nx_ip_create))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288 + Unknown Stack Size
 <LI>Call Chain = _nx_ip_create &rArr; _tx_thread_create &rArr; _tx_thread_system_resume &rArr; _tx_timer_system_deactivate
 </UL>
@@ -6636,8 +6636,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[40b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_system_resume
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
-<LI><a href="#[409]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_rarp_packet_deferred_receive
+<BR>[Called By]<UL><LI><a href="#[409]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_rarp_packet_deferred_receive
 <LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_arp_packet_deferred_receive
 <LI><a href="#[40a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nxe_packet_release
 <LI><a href="#[3b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_packet_transmit_release
@@ -6648,6 +6647,7 @@ Global Symbols
 <LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_receive
 <LI><a href="#[45b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_send_unicast_request
 <LI><a href="#[457]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_receive_time_update
+<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
 <LI><a href="#[41f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_icmpv6_send_ns
 <LI><a href="#[437]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_packet_receive
 <LI><a href="#[434]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_packet_copy
@@ -6716,7 +6716,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[458]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_process_update_packet
 </UL>
 
-<P><STRONG><a name="[44d]"></a>_nx_sntp_client_create</STRONG> (Thumb, 524 bytes, Stack size 64 bytes, nxd_sntp_client.o(.text._nx_sntp_client_create))
+<P><STRONG><a name="[44d]"></a>_nx_sntp_client_create</STRONG> (Thumb, 526 bytes, Stack size 64 bytes, nxd_sntp_client.o(.text._nx_sntp_client_create))
 <BR><BR>[Stack]<UL><LI>Max Depth = 556 + Unknown Stack Size
 <LI>Call Chain = _nx_sntp_client_create &rArr; _txe_mutex_delete &rArr; _tx_mutex_delete &rArr; _tx_mutex_put &rArr; _tx_mutex_priority_change &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
@@ -6829,7 +6829,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> nxd_sntp_client.o(.text._nx_sntp_client_create)
 </UL>
-<P><STRONG><a name="[457]"></a>_nx_sntp_client_receive_time_update</STRONG> (Thumb, 554 bytes, Stack size 120 bytes, nxd_sntp_client.o(.text._nx_sntp_client_receive_time_update))
+<P><STRONG><a name="[457]"></a>_nx_sntp_client_receive_time_update</STRONG> (Thumb, 556 bytes, Stack size 120 bytes, nxd_sntp_client.o(.text._nx_sntp_client_receive_time_update))
 <BR><BR>[Stack]<UL><LI>Max Depth = 532<LI>Call Chain = _nx_sntp_client_receive_time_update &rArr; _nx_udp_socket_receive &rArr; _nx_ip_checksum_compute &rArr; _tx_thread_sleep &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[450]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_extract_time_message_from_packet
@@ -6856,28 +6856,28 @@ Global Symbols
 <P><STRONG><a name="[45d]"></a>_nx_sntp_client_run_unicast</STRONG> (Thumb, 290 bytes, Stack size 32 bytes, nxd_sntp_client.o(.text._nx_sntp_client_run_unicast))
 <BR><BR>[Stack]<UL><LI>Max Depth = 540<LI>Call Chain = _nx_sntp_client_run_unicast &rArr; _nx_udp_socket_bind &rArr; _nx_udp_free_port_find &rArr; _tx_mutex_put &rArr; _tx_mutex_priority_change &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_thread_resume
+<BR>[Calls]<UL><LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_put
+<LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_get
+<LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_thread_resume
 <LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_bind
 <LI><a href="#[3e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_timer_activate
 <LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
 <LI><a href="#[45e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_timer_deactivate
-<LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_put
-<LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_get
 </UL>
 <BR>[Called By]<UL><LI><a href="#[497]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nxe_sntp_client_run_unicast
 </UL>
 
-<P><STRONG><a name="[45b]"></a>_nx_sntp_client_send_unicast_request</STRONG> (Thumb, 324 bytes, Stack size 40 bytes, nxd_sntp_client.o(.text._nx_sntp_client_send_unicast_request))
+<P><STRONG><a name="[45b]"></a>_nx_sntp_client_send_unicast_request</STRONG> (Thumb, 326 bytes, Stack size 40 bytes, nxd_sntp_client.o(.text._nx_sntp_client_send_unicast_request))
 <BR><BR>[Stack]<UL><LI>Max Depth = 732<LI>Call Chain = _nx_sntp_client_send_unicast_request &rArr; _nxd_udp_socket_send &rArr; _nx_ipv6_packet_send &rArr; _nx_icmpv6_send_ns &rArr; _nx_ip_checksum_compute &rArr; _tx_thread_sleep &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_time_get
-<LI><a href="#[44f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_create_time_request_packet
-<LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_put
+<BR>[Calls]<UL><LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_put
 <LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_get
+<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_time_get
 <LI><a href="#[460]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nxd_udp_socket_send
 <LI><a href="#[45f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_utility_convert_time_to_UCHAR
 <LI><a href="#[3ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_packet_allocate
 <LI><a href="#[3b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_packet_release
+<LI><a href="#[44f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_create_time_request_packet
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[454]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_process_unicast
@@ -6893,15 +6893,15 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 804<LI>Call Chain = _nx_sntp_client_thread_entry &rArr; _nx_sntp_client_process &rArr; _nx_sntp_client_process_unicast &rArr; _nx_sntp_client_send_unicast_request &rArr; _nxd_udp_socket_send &rArr; _nx_ipv6_packet_send &rArr; _nx_icmpv6_send_ns &rArr; _nx_ip_checksum_compute &rArr; _tx_thread_sleep &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_sleep
+<LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_put
+<LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_get
 <LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_identify
 <LI><a href="#[461]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_thread_preemption_change
-<LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_put
 <LI><a href="#[453]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_process
-<LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_get
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> nxd_sntp_client.o(.text._nx_sntp_client_create)
 </UL>
-<P><STRONG><a name="[120]"></a>_nx_sntp_client_update_timeout_entry</STRONG> (Thumb, 110 bytes, Stack size 8 bytes, nxd_sntp_client.o(.text._nx_sntp_client_update_timeout_entry))
+<P><STRONG><a name="[120]"></a>_nx_sntp_client_update_timeout_entry</STRONG> (Thumb, 118 bytes, Stack size 8 bytes, nxd_sntp_client.o(.text._nx_sntp_client_update_timeout_entry))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _nx_sntp_client_update_timeout_entry
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> nxd_sntp_client.o(.text._nx_sntp_client_create)
@@ -6976,8 +6976,8 @@ Global Symbols
 <P><STRONG><a name="[122]"></a>_nx_tcp_cleanup_deferred</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, nx_tcp_cleanup_deferred.o(.text._nx_tcp_cleanup_deferred))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _nx_tcp_cleanup_deferred
 </UL>
-<BR>[Address Reference Count : 6]<UL><LI> nx_tcp_connect_cleanup.o(.text._nx_tcp_connect_cleanup)
-<LI> nx_tcp_client_bind_cleanup.o(.text._nx_tcp_client_bind_cleanup)
+<BR>[Address Reference Count : 6]<UL><LI> nx_tcp_client_bind_cleanup.o(.text._nx_tcp_client_bind_cleanup)
+<LI> nx_tcp_connect_cleanup.o(.text._nx_tcp_connect_cleanup)
 <LI> nx_tcp_deferred_cleanup_check.o(.text._nx_tcp_deferred_cleanup_check)
 <LI> nx_tcp_disconnect_cleanup.o(.text._nx_tcp_disconnect_cleanup)
 <LI> nx_tcp_receive_cleanup.o(.text._nx_tcp_receive_cleanup)
@@ -7003,13 +7003,13 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[126]"></a>_nx_tcp_deferred_cleanup_check</STRONG> (Thumb, 362 bytes, Stack size 32 bytes, nx_tcp_deferred_cleanup_check.o(.text._nx_tcp_deferred_cleanup_check))
-<BR><BR>[Stack]<UL><LI>Max Depth = 368<LI>Call Chain = _nx_tcp_deferred_cleanup_check &rArr; _nx_tcp_client_bind_cleanup &rArr; _tx_event_flags_set &rArr; _tx_thread_system_resume &rArr; _tx_timer_system_deactivate
+<BR><BR>[Stack]<UL><LI>Max Depth = 368<LI>Call Chain = _nx_tcp_deferred_cleanup_check &rArr; _nx_tcp_transmit_cleanup &rArr; _tx_event_flags_set &rArr; _tx_thread_system_resume &rArr; _tx_timer_system_deactivate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[468]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_client_bind_cleanup
-<LI><a href="#[46c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_transmit_cleanup
+<BR>[Calls]<UL><LI><a href="#[46c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_transmit_cleanup
 <LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_receive_cleanup
 <LI><a href="#[46a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_disconnect_cleanup
 <LI><a href="#[469]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_connect_cleanup
+<LI><a href="#[468]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_client_bind_cleanup
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> nx_tcp_enable.o(.text._nx_tcp_enable)
 </UL>
@@ -7023,7 +7023,7 @@ Global Symbols
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_deferred_cleanup_check
 </UL>
 
-<P><STRONG><a name="[46d]"></a>_nx_tcp_enable</STRONG> (Thumb, 210 bytes, Stack size 24 bytes, nx_tcp_enable.o(.text._nx_tcp_enable))
+<P><STRONG><a name="[46d]"></a>_nx_tcp_enable</STRONG> (Thumb, 216 bytes, Stack size 24 bytes, nx_tcp_enable.o(.text._nx_tcp_enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = _nx_tcp_enable &rArr; _nx_ip_fast_periodic_timer_create &rArr; _tx_timer_create &rArr; _tx_timer_system_activate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[435]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_fast_periodic_timer_create
@@ -7447,8 +7447,8 @@ Global Symbols
 <LI><a href="#[489]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_free_port_find
 <LI><a href="#[3c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand
 </UL>
-<BR>[Called By]<UL><LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
-<LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_start
+<BR>[Called By]<UL><LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_start
+<LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
 </UL>
 
 <P><STRONG><a name="[3c8]"></a>_nx_udp_socket_create</STRONG> (Thumb, 270 bytes, Stack size 48 bytes, nx_udp_socket_create.o(.text._nx_udp_socket_create))
@@ -7517,8 +7517,8 @@ Global Symbols
 <LI><a href="#[40b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_system_resume
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_bind_cleanup
 </UL>
-<BR>[Called By]<UL><LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
-<LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_start
+<BR>[Called By]<UL><LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_start
+<LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
 </UL>
 
 <P><STRONG><a name="[3e6]"></a>_nx_utility_string_length_check</STRONG> (Thumb, 88 bytes, Stack size 20 bytes, nx_utility.o(.text._nx_utility_string_length_check))
@@ -7870,7 +7870,6 @@ Global Symbols
 <LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_arp_packet_deferred_receive
 <LI><a href="#[408]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_packet_deferred_receive
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_driver_deferred_processing
-<LI><a href="#[468]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_client_bind_cleanup
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_fast_periodic_timer_entry
 <LI><a href="#[432]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ipv6_process_fragment_option
 <LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ipv4_packet_receive
@@ -7881,6 +7880,7 @@ Global Symbols
 <LI><a href="#[46b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_receive_cleanup
 <LI><a href="#[46a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_disconnect_cleanup
 <LI><a href="#[469]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_connect_cleanup
+<LI><a href="#[468]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_client_bind_cleanup
 </UL>
 
 <P><STRONG><a name="[4a0]"></a>_tx_initialize_high_level</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, tx_initialize_high_level.o(.text._tx_initialize_high_level))
@@ -7939,10 +7939,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[40f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_system_suspend
 <LI><a href="#[4a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_mutex_priority_change
 </UL>
-<BR>[Called By]<UL><LI><a href="#[262]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_lock
-<LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_bind
-<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
-<LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_get
+<BR>[Called By]<UL><LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_get
+<LI><a href="#[262]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_lock
 <LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_delete
 <LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_create
 <LI><a href="#[3e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_gateway_address_set
@@ -7951,6 +7949,8 @@ Global Symbols
 <LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_interface_address_set
 <LI><a href="#[3d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_interface_address_get
 <LI><a href="#[460]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nxd_udp_socket_send
+<LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_bind
+<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
 <LI><a href="#[438]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ipv6_multicast_join
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_thread_entry
 <LI><a href="#[42b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_address_get
@@ -7987,10 +7987,8 @@ Global Symbols
 <LI><a href="#[4a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_mutex_prioritize
 <LI><a href="#[4a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_mutex_priority_change
 </UL>
-<BR>[Called By]<UL><LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_unlock
-<LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_bind
-<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
-<LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_put
+<BR>[Called By]<UL><LI><a href="#[3c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_mutex_put
+<LI><a href="#[264]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_unlock
 <LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_delete
 <LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_create
 <LI><a href="#[3e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_gateway_address_set
@@ -7999,6 +7997,8 @@ Global Symbols
 <LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_interface_address_set
 <LI><a href="#[3d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_interface_address_get
 <LI><a href="#[460]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nxd_udp_socket_send
+<LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_bind
+<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
 <LI><a href="#[438]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ipv6_multicast_join
 <LI><a href="#[4a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_mutex_delete
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_thread_entry
@@ -8184,12 +8184,12 @@ Global Symbols
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_thread_create
 <LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_mutex_put
 <LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_create
-<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
 <LI><a href="#[3cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_event_flags_create
 <LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_timer_create
 <LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_delete
 <LI><a href="#[4b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_txe_semaphore_create
 <LI><a href="#[3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_packet_pool_delete
+<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
 <LI><a href="#[49f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_event_flags_delete
 <LI><a href="#[4a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_mutex_delete
 <LI><a href="#[4ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_terminate
@@ -8211,10 +8211,9 @@ Global Symbols
 <LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_resume
 <LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_create
 <LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_queue_send
-<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
 <LI><a href="#[3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_packet_pool_delete
 <LI><a href="#[3b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_packet_release
-<LI><a href="#[468]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_client_bind_cleanup
+<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_unbind
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_packet_pool_cleanup
 <LI><a href="#[49f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_event_flags_delete
 <LI><a href="#[4a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_mutex_delete
@@ -8229,6 +8228,7 @@ Global Symbols
 <LI><a href="#[46a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_disconnect_cleanup
 <LI><a href="#[469]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_connect_cleanup
 <LI><a href="#[486]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_socket_thread_resume
+<LI><a href="#[468]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_tcp_client_bind_cleanup
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_timeout
 <LI><a href="#[4aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_semaphore_put
 <LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_semaphore_cleanup
@@ -8250,9 +8250,9 @@ Global Symbols
 <LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_queue_receive
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_mutex_get
 <LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_queue_send
-<LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_bind
 <LI><a href="#[3ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_packet_allocate
 <LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_receive
+<LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_udp_socket_bind
 <LI><a href="#[439]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_event_flags_get
 <LI><a href="#[4ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_terminate
 <LI><a href="#[40c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_icmp_interface_ping
@@ -8289,9 +8289,9 @@ Global Symbols
 <P><STRONG><a name="[34e]"></a>_tx_time_get</STRONG> (Thumb, 46 bytes, Stack size 20 bytes, tx_time_get.o(.text._tx_time_get))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = _tx_time_get
 </UL>
-<BR>[Called By]<UL><LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_pen_speed_update
-<LI><a href="#[343]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_pen_flick_test
+<BR>[Called By]<UL><LI><a href="#[343]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_pen_flick_test
 <LI><a href="#[341]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_pen_speed_init
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gx_system_pen_speed_update
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_receive_notify
 <LI><a href="#[450]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_extract_time_message_from_packet
 <LI><a href="#[45b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_send_unicast_request
@@ -8476,8 +8476,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_mutex_get
 </UL>
-<BR>[Called By]<UL><LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
-<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_thread_entry
+<BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_thread_entry
 <LI><a href="#[3e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_state_change_notify
 <LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_start
 <LI><a href="#[3e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_start
@@ -8486,6 +8485,7 @@ Global Symbols
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_client_send_with_zero_source_address
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_thread_entry
 <LI><a href="#[45b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_send_unicast_request
+<LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
 </UL>
 
 <P><STRONG><a name="[3c5]"></a>_txe_mutex_put</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, txe_mutex_put.o(.text._txe_mutex_put))
@@ -8493,8 +8493,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_mutex_put
 </UL>
-<BR>[Called By]<UL><LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
-<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_thread_entry
+<BR>[Called By]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_thread_entry
 <LI><a href="#[3e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_state_change_notify
 <LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_start
 <LI><a href="#[3e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_start
@@ -8503,6 +8502,7 @@ Global Symbols
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_client_send_with_zero_source_address
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_thread_entry
 <LI><a href="#[45b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_send_unicast_request
+<LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
 </UL>
 
 <P><STRONG><a name="[4b2]"></a>_txe_semaphore_create</STRONG> (Thumb, 344 bytes, Stack size 80 bytes, txe_semaphore_create.o(.text._txe_semaphore_create))
@@ -8564,8 +8564,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_resume
 </UL>
-<BR>[Called By]<UL><LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
-<LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_start
+<BR>[Called By]<UL><LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_start
+<LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
 </UL>
 
 <P><STRONG><a name="[3d0]"></a>_txe_thread_terminate</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, txe_thread_terminate.o(.text._txe_thread_terminate))
@@ -8581,8 +8581,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_timer_activate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
-<LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_start
+<BR>[Called By]<UL><LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_start
+<LI><a href="#[45d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_sntp_client_run_unicast
 </UL>
 
 <P><STRONG><a name="[3ca]"></a>_txe_timer_create</STRONG> (Thumb, 420 bytes, Stack size 96 bytes, txe_timer_create.o(.text._txe_timer_create))
@@ -8925,7 +8925,6 @@ Global Symbols
 <LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT911_InitHard
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dhcp_state_cb
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ip_change_callback
-<LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sntp_update_callback
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nx_app_thread_entry
 </UL>
 
@@ -9180,15 +9179,15 @@ Local Symbols
 <P><STRONG><a name="[16f]"></a>ETH_SetMACConfig</STRONG> (Thumb, 468 bytes, Stack size 12 bytes, stm32h7xx_hal_eth.o(.text.ETH_SetMACConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = ETH_SetMACConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_SetMACConfig
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETH_MACDMAConfig
+<BR>[Called By]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETH_MACDMAConfig
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_SetMACConfig
 </UL>
 
 <P><STRONG><a name="[170]"></a>ETH_SetDMAConfig</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, stm32h7xx_hal_eth.o(.text.ETH_SetDMAConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = ETH_SetDMAConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_SetDMAConfig
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETH_MACDMAConfig
+<BR>[Called By]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ETH_MACDMAConfig
+<LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_SetDMAConfig
 </UL>
 
 <P><STRONG><a name="[171]"></a>ETH_UpdateDescriptor</STRONG> (Thumb, 278 bytes, Stack size 40 bytes, stm32h7xx_hal_eth.o(.text.ETH_UpdateDescriptor))
@@ -10206,9 +10205,9 @@ Local Symbols
 <P><STRONG><a name="[4bd]"></a>gx_studio_action_target_get</STRONG> (Thumb, 138 bytes, Stack size 32 bytes, test_specifications.o(.text.gx_studio_action_target_get))
 <BR><BR>[Stack]<UL><LI>Max Depth = 692<LI>Call Chain = gx_studio_action_target_get &rArr; gx_studio_widget_create &rArr; gx_studio_nested_widget_create &rArr;  gx_studio_nested_widget_create (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_widget_find
-<LI><a href="#[4be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gx_studio_widget_create
+<BR>[Calls]<UL><LI><a href="#[4be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gx_studio_widget_create
 <LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_window_root_find
+<LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_widget_find
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gx_studio_auto_event_handler
 <LI><a href="#[4bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gx_studio_animation_execute
@@ -10217,8 +10216,8 @@ Local Symbols
 <P><STRONG><a name="[4bc]"></a>gx_studio_action_target_find</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, test_specifications.o(.text.gx_studio_action_target_find))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = gx_studio_action_target_find &rArr; _gxe_widget_find &rArr; _gx_widget_find
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_widget_find
-<LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_window_root_find
+<BR>[Calls]<UL><LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_window_root_find
+<LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_widget_find
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gx_studio_auto_event_handler
 </UL>
@@ -10238,8 +10237,8 @@ Local Symbols
 <P><STRONG><a name="[4bb]"></a>gx_studio_action_parent_find</STRONG> (Thumb, 72 bytes, Stack size 32 bytes, test_specifications.o(.text.gx_studio_action_parent_find))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = gx_studio_action_parent_find &rArr; _gxe_widget_find &rArr; _gx_widget_find
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_widget_find
-<LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_window_root_find
+<BR>[Calls]<UL><LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_window_root_find
+<LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_gxe_widget_find
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gx_studio_animation_execute
 </UL>
@@ -10298,12 +10297,11 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app_netxduo.o(.text.MX_NetXDuo_Init)
 </UL>
-<P><STRONG><a name="[137]"></a>sntp_update_callback</STRONG> (Thumb, 100 bytes, Stack size 72 bytes, app_netxduo.o(.text.sntp_update_callback))
+<P><STRONG><a name="[137]"></a>sntp_update_callback</STRONG> (Thumb, 82 bytes, Stack size 72 bytes, app_netxduo.o(.text.sntp_update_callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = sntp_update_callback &rArr; RTC_WriteClock &rArr; HAL_RTC_SetDate &rArr; RTC_ExitInitMode &rArr; HAL_RTC_WaitForSynchro
 </UL>
 <BR>[Calls]<UL><LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WriteClock
 <LI><a href="#[4c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;unix_to_datetime
-<LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app_netxduo.o(.text.nx_app_thread_entry)
 </UL>
@@ -10330,9 +10328,9 @@ Local Symbols
 <P><STRONG><a name="[3f5]"></a>_nx_driver_enable</STRONG> (Thumb, 330 bytes, Stack size 152 bytes, nx_stm32_eth_driver.o(.text._nx_driver_enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 508<LI>Call Chain = _nx_driver_enable &rArr; _nx_driver_hardware_enable &rArr; HAL_ETH_Start_IT &rArr; ETH_UpdateDescriptor &rArr; HAL_ETH_RxAllocateCallback &rArr; _nxe_packet_allocate &rArr; _nx_packet_allocate &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_SetMACConfig
+<BR>[Calls]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_SetMACConfig
 <LI><a href="#[3f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_ETH_GetMACConfig
-<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[3f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nx_eth_phy_get_link_state
 <LI><a href="#[3f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nx_eth_phy_init
 <LI><a href="#[3f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_driver_hardware_enable
@@ -10538,7 +10536,7 @@ Local Symbols
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_thread_entry
 </UL>
 
-<P><STRONG><a name="[3e2]"></a>_nx_dhcp_packet_process</STRONG> (Thumb, 1048 bytes, Stack size 88 bytes, nxd_dhcp_client.o(.text._nx_dhcp_packet_process))
+<P><STRONG><a name="[3e2]"></a>_nx_dhcp_packet_process</STRONG> (Thumb, 1054 bytes, Stack size 88 bytes, nxd_dhcp_client.o(.text._nx_dhcp_packet_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 948<LI>Call Chain = _nx_dhcp_packet_process &rArr; _nx_dhcp_send_request_internal &rArr; _nx_udp_socket_source_send &rArr; _nx_udp_socket_send &rArr; _nxd_udp_socket_send &rArr; _nx_ipv6_packet_send &rArr; _nx_icmpv6_send_ns &rArr; _nx_ip_checksum_compute &rArr; _tx_thread_sleep &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tx_thread_sleep
@@ -10557,7 +10555,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_thread_entry
 </UL>
 
-<P><STRONG><a name="[3ed]"></a>_nx_dhcp_timeout_process</STRONG> (Thumb, 710 bytes, Stack size 32 bytes, nxd_dhcp_client.o(.text._nx_dhcp_timeout_process))
+<P><STRONG><a name="[3ed]"></a>_nx_dhcp_timeout_process</STRONG> (Thumb, 716 bytes, Stack size 32 bytes, nxd_dhcp_client.o(.text._nx_dhcp_timeout_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 892<LI>Call Chain = _nx_dhcp_timeout_process &rArr; _nx_dhcp_send_request_internal &rArr; _nx_udp_socket_source_send &rArr; _nx_udp_socket_send &rArr; _nxd_udp_socket_send &rArr; _nx_ipv6_packet_send &rArr; _nx_icmpv6_send_ns &rArr; _nx_ip_checksum_compute &rArr; _tx_thread_sleep &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_interface_reinitialize
@@ -10587,7 +10585,7 @@ Local Symbols
 <LI><a href="#[3e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_packet_process
 </UL>
 
-<P><STRONG><a name="[3f0]"></a>_nx_dhcp_update_renewal_timeout</STRONG> (Thumb, 60 bytes, Stack size 4 bytes, nxd_dhcp_client.o(.text._nx_dhcp_update_renewal_timeout))
+<P><STRONG><a name="[3f0]"></a>_nx_dhcp_update_renewal_timeout</STRONG> (Thumb, 64 bytes, Stack size 4 bytes, nxd_dhcp_client.o(.text._nx_dhcp_update_renewal_timeout))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = _nx_dhcp_update_renewal_timeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_timeout_process
@@ -10658,7 +10656,7 @@ Local Symbols
 <LI><a href="#[3e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_packet_process
 </UL>
 
-<P><STRONG><a name="[3d3]"></a>_nx_dhcp_extract_information</STRONG> (Thumb, 600 bytes, Stack size 40 bytes, nxd_dhcp_client.o(.text._nx_dhcp_extract_information))
+<P><STRONG><a name="[3d3]"></a>_nx_dhcp_extract_information</STRONG> (Thumb, 606 bytes, Stack size 40 bytes, nxd_dhcp_client.o(.text._nx_dhcp_extract_information))
 <BR><BR>[Stack]<UL><LI>Max Depth = 460<LI>Call Chain = _nx_dhcp_extract_information &rArr; _nx_ip_interface_address_get &rArr; _tx_mutex_put &rArr; _tx_mutex_priority_change &rArr; _tx_thread_system_suspend &rArr; _tx_timer_system_activate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_ip_interface_address_get
@@ -10669,7 +10667,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[3e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nx_dhcp_packet_process
 </UL>
 
-<P><STRONG><a name="[3c0]"></a>_nx_dhcp_add_randomize</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, nxd_dhcp_client.o(.text._nx_dhcp_add_randomize))
+<P><STRONG><a name="[3c0]"></a>_nx_dhcp_add_randomize</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, nxd_dhcp_client.o(.text._nx_dhcp_add_randomize))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = _nx_dhcp_add_randomize
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand

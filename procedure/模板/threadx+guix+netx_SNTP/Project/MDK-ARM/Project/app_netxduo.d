@@ -17,7 +17,7 @@ project/app_netxduo.o: ..\NetXDuo\App\app_netxduo.c \
   ..\Middlewares\ST\netxduo\addons\sntp\nxd_sntp_client.h \
   ..\Middlewares\ST\netxduo\addons\web\nx_web_http_client.h \
   ..\Middlewares\ST\netxduo\addons\web\nx_web_http_common.h \
-  ..\Core\Inc\rtc.h ..\Core\Inc\main.h \
+  ..\User\user_global.h ..\User\dwt\dwt.h ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h \
@@ -53,4 +53,10 @@ project/app_netxduo.o: ..\NetXDuo\App\app_netxduo.c \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_fmc.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h \
-  D:\software\Keil_v5\pack\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h
+  D:\software\Keil_v5\pack\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h \
+  ..\User\Print\Print.h ..\User\IIC\IIC.h ..\User\GT911\GT911.h \
+  ..\User\PCF8574\pcf8574.h ..\User\Touch\Touch.h \
+  ..\User\guix\MainTask.h ..\User\guix\gx_user.h \
+  ..\GUIX\common\inc\gx_api.h ..\GUIX\ports\cortex_m7\ac6\inc\gx_port.h \
+  ..\User\guix\test_resources.h ..\User\guix\test_specifications.h \
+  ..\Core\Inc\tim.h ..\Core\Inc\rtc.h

@@ -37,10 +37,4 @@ project/nx_stm32_phy_driver.o: \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_fmc.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h \
-  ..\Drivers\BSP\Components\lan8742\lan8742.h ..\User\PCF8574\pcf8574.h \
-  ..\User\IIC\IIC.h ..\Core\Inc\main.h \
-  D:\software\Keil_v5\pack\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h \
-  ..\User\dwt\dwt.h ..\Core\Inc\eth.h \
-  ..\Middlewares\ST\threadx\common\inc\tx_api.h \
-  ..\Middlewares\ST\threadx\ports\cortex_m7\ac6\inc\tx_port.h \
-  ..\Core\Inc\tx_user.h
+  ..\Drivers\BSP\Components\lan8742\lan8742.h

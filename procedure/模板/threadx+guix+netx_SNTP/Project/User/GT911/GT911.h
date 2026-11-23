@@ -3,7 +3,7 @@
 
 #define GT911_ENABLE
 
-#include "IIC.h"
+#include "main.h"
 
 #define GT911_IIC_ADDR1	0xBA
 

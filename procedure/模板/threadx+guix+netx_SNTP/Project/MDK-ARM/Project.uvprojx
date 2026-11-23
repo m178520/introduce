@@ -340,7 +340,7 @@
               <MiscControls>-Wno-invalid-source-encoding</MiscControls>
               <Define>USE_PWR_LDO_SUPPLY,TX_INCLUDE_USER_DEFINE_FILE,USE_HAL_DRIVER,STM32H753xx,NX_INCLUDE_USER_DEFINE_FILE,NX_SECURE_INCLUDE_USER_DEFINE_FILE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../AZURE_RTOS/App;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Middlewares/ST/threadx/common/inc/;../Middlewares/ST/threadx/ports/cortex_m7/ac6/inc/;../GUIX/common/inc;../GUIX/ports/cortex_m7/ac6/inc;../User/guix;../User/GT911;../User/IIC;../User/Touch;../User/dwt;../NetXDuo/App;../NetXDuo/Target;../Drivers/BSP/Components/lan8742/;../Middlewares/ST/netxduo/common/drivers/ethernet/;../Middlewares/ST/netxduo/addons/web/;../Middlewares/ST/netxduo/addons/dhcp/;../Middlewares/ST/netxduo/common/inc/;../Middlewares/ST/netxduo/ports/cortex_m7/ac5/inc/;../Middlewares/ST/netxduo/addons/sntp/;../Middlewares/ST/netxduo/addons/ftp/;../Middlewares/ST/netxduo/nx_secure/inc/;../Middlewares/ST/netxduo/nx_secure/ports/;../Middlewares/ST/netxduo/crypto_libraries/inc/;../Middlewares/ST/netxduo/crypto_libraries/ports/cortex_m7/ac6/inc/;../Middlewares/ST/netxduo/addons/dns/;../User/PCF8574</IncludePath>
+              <IncludePath>../Core/Inc;../AZURE_RTOS/App;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../Middlewares/ST/threadx/common/inc/;../Middlewares/ST/threadx/ports/cortex_m7/ac6/inc/;../GUIX/common/inc;../GUIX/ports/cortex_m7/ac6/inc;../NetXDuo/App;../NetXDuo/Target;../Drivers/BSP/Components/lan8742/;../Middlewares/ST/netxduo/common/drivers/ethernet/;../Middlewares/ST/netxduo/addons/web/;../Middlewares/ST/netxduo/addons/dhcp/;../Middlewares/ST/netxduo/common/inc/;../Middlewares/ST/netxduo/ports/cortex_m7/ac5/inc/;../Middlewares/ST/netxduo/addons/sntp/;../Middlewares/ST/netxduo/addons/ftp/;../Middlewares/ST/netxduo/nx_secure/inc/;../Middlewares/ST/netxduo/nx_secure/ports/;../Middlewares/ST/netxduo/crypto_libraries/inc/;../Middlewares/ST/netxduo/crypto_libraries/ports/cortex_m7/ac6/inc/;../Middlewares/ST/netxduo/addons/dns/;..\User</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -423,6 +423,11 @@
               <FileName>dwt.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\dwt\dwt.c</FilePath>
+            </File>
+            <File>
+              <FileName>Print.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Print\Print.c</FilePath>
             </File>
             <File>
               <FileName>main.c</FileName>

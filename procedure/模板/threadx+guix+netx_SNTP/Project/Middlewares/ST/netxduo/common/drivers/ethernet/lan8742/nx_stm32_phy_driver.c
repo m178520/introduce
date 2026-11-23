@@ -13,9 +13,7 @@
 
 #include "nx_stm32_phy_driver.h"
 #include "nx_stm32_eth_config.h"
-#include "pcf8574.h"
-#include "eth.h"
-#include "tx_api.h"
+
 
 /* LAN8742 IO functions */
 static int32_t lan8742_io_init(void);

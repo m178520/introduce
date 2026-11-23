@@ -2,7 +2,6 @@
 #define __IIC_H
 
 #include "main.h"
-#include "dwt.h"
 
 #define I2C_WR	0		/* Ğ´¿ØÖÆbit */
 #define I2C_RD	1		/* ¶Á¿ØÖÆbit */

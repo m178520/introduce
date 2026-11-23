@@ -331,7 +331,7 @@ extern   "C" {
    recommends a minimum polling interval of once per hour to minimize traffic congestion. */
 
 #ifndef NX_SNTP_CLIENT_UNICAST_POLL_INTERVAL    
-#define NX_SNTP_CLIENT_UNICAST_POLL_INTERVAL        3600
+#define NX_SNTP_CLIENT_UNICAST_POLL_INTERVAL       3600
 #endif
 
 

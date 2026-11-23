@@ -1,10 +1,6 @@
 /*主要用于扩展，适配不同的屏幕与按键*/
 
-#include "Touch.h"
-#include "GT911.h"
-#include "stdio.h"
-
-#include "TEST_specifications.h"
+#include "user_global.h"
 
 #include   "gx_api.h"
 

@@ -6,6 +6,7 @@
 "project\touch.o"
 "project\pcf8574.o"
 "project\dwt.o"
+"project\print.o"
 "project\main.o"
 "project\tx_initialize_low_level.o"
 "project\gpio.o"

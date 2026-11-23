@@ -27,12 +27,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "main.h"
+#include "user_global.h"
 
-//#include "tim.h"
-
-#include "MainTask.h"
-#include "Touch.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -70,15 +66,14 @@ static  TX_THREAD   AppTaskGUITCB;
 static  uint64_t    AppTaskGUIStk[APP_CFG_TASK_START_STK_SIZE/8];
 static  void  AppTaskGUI          (ULONG thread_input);
 
-static  TX_MUTEX   AppPrintfSemp;	/* 用于printf互斥 */
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
+extern TX_MUTEX   PrintfSemp;	/* 用于printf互斥 */
 static  void  AppTaskCreate         (void);
 static  void  AppObjCreate          (void);
 
-static  void  App_Printf (const char *fmt, ...);
 static  void  DispTaskInfo          (void);
 /* USER CODE END PFP */
 
@@ -270,38 +265,10 @@ static  void  AppTaskCreate (void)
 static  void  AppObjCreate (void)
 {
 	 /* 创建互斥信号量 */
-    tx_mutex_create(&AppPrintfSemp,"AppPrintfSemp",TX_NO_INHERIT);
+    tx_mutex_create(&PrintfSemp,"AppPrintfSemp",TX_NO_INHERIT);
 }
 
-/*
-*********************************************************************************************************
-*	函 数 名: App_Printf
-*	功能说明: 线程安全的printf方式		  			  
-*	形    参: 同printf的参数。
-*             在C中，当无法列出传递函数的所有实参的类型和数目时,可以用省略号指定参数表
-*	返 回 值: 无
-*********************************************************************************************************
-*/
-static  void  App_Printf(const char *fmt, ...)
-{
-    char  buf_str[200 + 1]; /* 特别注意，如果printf的变量较多，注意此局部变量的大小是否够用 */
-    va_list   v_args;
 
-
-    va_start(v_args, fmt);
-   (void)vsnprintf((char       *)&buf_str[0],
-                   (size_t      ) sizeof(buf_str),
-                   (char const *) fmt,
-                                  v_args);
-    va_end(v_args);
-
-	/* 互斥操作 */
-    tx_mutex_get(&AppPrintfSemp, TX_WAIT_FOREVER);
-
-    printf("%s", buf_str);
-
-    tx_mutex_put(&AppPrintfSemp);
-}
  
 /*
 *********************************************************************************************************
@@ -326,15 +293,15 @@ static void DispTaskInfo(void)
 //	App_Printf("系统总执行时间 = %.9fs\r\n", (double)(_tx_execution_thread_time_total + \
 //		                                               _tx_execution_idle_time_total +  \
 //	                                                   _tx_execution_isr_time_total)/SystemCoreClock);	
-	App_Printf("===============================================================\r\n");
-	App_Printf(" 任务优先级 任务栈大小 当前使用栈  最大栈使用   任务名\r\n");
-	App_Printf("   Prio     StackSize   CurStack    MaxStack   Taskname\r\n");
+	RTC_LOG_Printf("===============================================================\r\n");
+	RTC_LOG_Printf(" 任务优先级 任务栈大小 当前使用栈  最大栈使用   任务名\r\n");
+	RTC_LOG_Printf("   Prio     StackSize   CurStack    MaxStack   Taskname\r\n");
 
 	/* 遍历任务控制列表TCB list)，打印所有的任务的优先级和名称 */
 	while (p_tcb != (TX_THREAD *)0) 
 	{
 		
-		App_Printf("   %2d        %5d      %5d       %5d      %s\r\n", 
+		RTC_LOG_Printf("   %2d        %5d      %5d       %5d      %s\r\n", 
                     p_tcb->tx_thread_priority,
                     p_tcb->tx_thread_stack_size,
                     (int)p_tcb->tx_thread_stack_end - (int)p_tcb->tx_thread_stack_ptr,

@@ -1,6 +1,7 @@
 project/lan8742.o: ..\Drivers\BSP\Components\lan8742\lan8742.c \
-  ..\Drivers\BSP\Components\lan8742\lan8742.h ..\User\dwt\dwt.h \
-  ..\Core\Inc\main.h ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
+  ..\Drivers\BSP\Components\lan8742\lan8742.h ..\User\user_global.h \
+  ..\User\dwt\dwt.h ..\Core\Inc\main.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_def.h \
@@ -35,4 +36,13 @@ project/lan8742.o: ..\Drivers\BSP\Components\lan8742\lan8742.c \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_fmc.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h \
-  D:\software\Keil_v5\pack\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h
+  D:\software\Keil_v5\pack\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h \
+  ..\User\Print\Print.h ..\User\IIC\IIC.h ..\User\GT911\GT911.h \
+  ..\User\PCF8574\pcf8574.h ..\User\Touch\Touch.h \
+  ..\User\guix\MainTask.h ..\User\guix\gx_user.h ..\Core\Inc\tx_user.h \
+  ..\GUIX\common\inc\gx_api.h \
+  ..\Middlewares\ST\threadx\common\inc\tx_api.h \
+  ..\Middlewares\ST\threadx\ports\cortex_m7\ac6\inc\tx_port.h \
+  ..\GUIX\ports\cortex_m7\ac6\inc\gx_port.h \
+  ..\User\guix\test_resources.h ..\User\guix\test_specifications.h \
+  ..\Core\Inc\tim.h

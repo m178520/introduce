@@ -28,9 +28,7 @@
 /* USER CODE BEGIN Includes */
 #include "EventRecorder.h"
 
-#include "dwt.h"
-#include "Touch.h"
-#include "pcf8574.h"
+#include "user_global.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

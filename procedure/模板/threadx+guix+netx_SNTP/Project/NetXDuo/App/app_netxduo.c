@@ -33,6 +33,7 @@
 #include "nxd_sntp_client.h"
 #include "nx_web_http_client.h"
 
+#include "user_global.h"
 #include "rtc.h"
 /* USER CODE END Includes */
 
@@ -75,7 +76,8 @@ void dhcp_state_cb(NX_DHCP *dhcp_ptr, UCHAR new_state);
 //NX_DNS         dns_client;
 
 /*SNTP参数*/
-//#define NX_SNTP_CLIENT_UNICAST_POLL_INTERVAL        60 //sntp获取频率
+
+//#define NX_SNTP_CLIENT_UNICAST_POLL_INTERVAL        60 //sntp获取频率 60为一分钟（前提为NX_IP_PERIODIC_RATE = 1000）
 //#define NX_SNTP_CLIENT_MAX_TIME_ADJUSTMENT					(24UL * 3600UL * 1000UL)
 NX_SNTP_CLIENT sntp_client;
 static void sntp_update_callback(NX_SNTP_TIME_MESSAGE *time_update_ptr, NX_SNTP_TIME *local_time);
@@ -439,6 +441,7 @@ static void sntp_update_callback(NX_SNTP_TIME_MESSAGE *time_update_ptr, NX_SNTP_
 //    printf("[SNTP] Beijing: %04d-%02d-%02d %02d:%02d:%02d\r\n", tm.year, tm.month, tm.day, tm.hour, tm.minute, tm.second);
 
 	// ========= 写入硬件RTC =========
-   if(RTC_WriteClock(tm.year, tm.month, tm.day, tm.hour, tm.minute, tm.second)) printf("RTC写入成功\r\n");
+   RTC_WriteClock(tm.year, tm.month, tm.day, tm.hour, tm.minute, tm.second);
+//		 RTC_LOG_Printf("RTC写入成功\r\n");
 }
 /* USER CODE END 2 */

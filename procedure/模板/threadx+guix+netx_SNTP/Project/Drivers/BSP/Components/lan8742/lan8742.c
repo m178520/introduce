@@ -19,7 +19,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "lan8742.h"
-#include "dwt.h"
+#include "user_global.h"
 /** @addtogroup BSP
   * @{
   */

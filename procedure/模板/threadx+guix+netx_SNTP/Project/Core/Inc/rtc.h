@@ -36,6 +36,8 @@ extern "C" {
 extern RTC_HandleTypeDef hrtc;
 
 /* USER CODE BEGIN Private defines */
+#define RTC_ENABLE
+
 typedef struct
 {
 	uint16_t Year;
