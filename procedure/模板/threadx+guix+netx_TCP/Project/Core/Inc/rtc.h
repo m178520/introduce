@@ -1,0 +1,70 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file    rtc.h
+  * @brief   This file contains all the function prototypes for
+  *          the rtc.c file
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2026 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __RTC_H__
+#define __RTC_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+#include "string.h"
+
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+extern RTC_HandleTypeDef hrtc;
+
+/* USER CODE BEGIN Private defines */
+typedef struct
+{
+	uint16_t Year;
+	uint8_t Mon;
+	uint8_t Day;	
+	uint8_t Hour;		
+	uint8_t Min;				
+	uint8_t Sec;					
+	uint8_t Week;	
+	
+	uint8_t valid;
+	uint8_t Enable;
+}RTC_T;
+
+extern RTC_T g_tRTC;
+/* USER CODE END Private defines */
+
+void MX_RTC_Init(void);
+
+/* USER CODE BEGIN Prototypes */
+uint8_t RTC_WriteClock(uint16_t _year, uint8_t _mon, uint8_t _day, uint8_t _hour, uint8_t _min, uint8_t _sec);
+void RTC_ReadClock(void);
+uint8_t RTC_CalcWeek(uint16_t _year, uint8_t _mon, uint8_t _day);
+
+/* USER CODE END Prototypes */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __RTC_H__ */
+
