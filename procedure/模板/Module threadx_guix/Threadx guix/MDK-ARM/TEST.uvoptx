@@ -455,7 +455,7 @@
 
   <Group>
     <GroupName>Application/User/Module_manager/Core</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -19375,7 +19375,7 @@
 
   <Group>
     <GroupName>Middlewares/GUIX/Ports</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -19407,7 +19407,7 @@
 
   <Group>
     <GroupName>Middlewares/GUIX Studio/Display</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

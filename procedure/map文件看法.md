@@ -1,8 +1,12 @@
+# map文件的作用
+
+## 代码含义
 RO-Code                只读代码数据 只存Flash
 RO-Data                 只读数据        只存Flash
 RW （.data）          可读可写       初始化存Flash，运行时复制进入RAM
 ZI-Data（.bss）      零初始化数据 RAM中
 
+## stm32 cpu数据类型位数
 char      	8位
 short    	16位
 int         	32位	根据cpu位数更改最小16位
