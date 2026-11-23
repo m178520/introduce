@@ -1,7 +1,0 @@
-project/gx_display_driver_1bpp_vertical_pattern_line_draw.o: \
-  ..\GUIX\common\src\gx_display_driver_1bpp_vertical_pattern_line_draw.c \
-  ..\GUIX\common\inc\gx_api.h \
-  ..\Middlewares\ST\threadx\common\inc\tx_api.h \
-  ..\Middlewares\ST\threadx\ports\cortex_m7\ac6\inc\tx_port.h \
-  ..\Core\Inc\tx_user.h ..\GUIX\ports\cortex_m7\ac6\inc\gx_port.h \
-  ..\GUIX\common\inc\gx_display.h

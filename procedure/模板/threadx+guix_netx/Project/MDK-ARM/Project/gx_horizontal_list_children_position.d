@@ -1,8 +1,0 @@
-project/gx_horizontal_list_children_position.o: \
-  ..\GUIX\common\src\gx_horizontal_list_children_position.c \
-  ..\GUIX\common\inc\gx_api.h \
-  ..\Middlewares\ST\threadx\common\inc\tx_api.h \
-  ..\Middlewares\ST\threadx\ports\cortex_m7\ac6\inc\tx_port.h \
-  ..\Core\Inc\tx_user.h ..\GUIX\ports\cortex_m7\ac6\inc\gx_port.h \
-  ..\GUIX\common\inc\gx_widget.h ..\GUIX\common\inc\gx_window.h \
-  ..\GUIX\common\inc\gx_system.h
