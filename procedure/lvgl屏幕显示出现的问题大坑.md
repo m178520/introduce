@@ -1,6 +1,6 @@
-#调试lvgl遇到的坑
+# 调试lvgl遇到的坑
 
-##freertos 中硬件中断的优先级
+## freertos 中硬件中断的优先级
 freertos 中硬件中断的优先级必须大于8，不然会卡死，freertos做的保护，高于8的抢断任务freertos认为会有危险，
 就主动卡死
 
@@ -14,17 +14,20 @@ CubeMX 配置 `n` → 寄存器值 = `n << 4`
 - CubeMX 优先级 10 → `10 <<4 = 160` → 160 >=128 ✅ 合法
 ```
 
-##硬件中断配置
+## lvgl中GPU STM32-DMA2D
+>其中的DMA2D是将渲染好的数据传输至画布中，而不是guix中用DMA2D将画布数据传输至LTDC缓冲区中。
+
+## 硬件中断配置
 >LDTC与DMA2D的中断必须都打开，有一些同步的信号量需要在中断中触发
 
-##I/O巨坑
+## I/O巨坑
 >LTDC配置时一定需要将其I/O口配置为very HIGH的模式
 
-##FMC巨坑
+## FMC巨坑
 >fmc的突发必须使能，不然会白色条纹
 
 
-##fmc还需要将sdram芯片初始化序列
+## fmc还需要将sdram芯片初始化序列
 ```c
 #define SDRAM_TIMEOUT                    ((uint32_t)0xFFFF)
 
