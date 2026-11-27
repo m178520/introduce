@@ -1,0 +1,37 @@
+./objects/lv_x11_input.o: \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\lv_x11_input.c \
+  RTE\LVGL\lv_conf_cmsis.h RTE\_Target_1\RTE_Components.h \
+  RTE\_Target_1\Pre_Include_Global.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\lv_x11.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\lv_display.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_types.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\..\lv_conf_internal.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\..\lv_conf_kconfig.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_timer.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\..\tick\lv_tick.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\..\tick\..\lv_conf_internal.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\..\tick\..\misc\lv_types.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_ll.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_event.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_array.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_color.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_assert.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_log.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\..\stdlib\lv_mem.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\..\stdlib\..\lv_conf_internal.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\..\stdlib\lv_string.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\..\stdlib\..\misc\lv_types.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_math.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_palette.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_color_op.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\display\..\misc\lv_area.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\indev\lv_indev.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\indev\..\core\lv_group.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\indev\..\core\..\lv_conf_internal.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\indev\..\core\..\misc\lv_types.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\indev\..\core\..\misc\lv_ll.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\indev\..\misc\lv_area.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\indev\..\misc\lv_timer.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\indev\..\misc\lv_event.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\draw\lv_image_dsc.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\drivers\x11\..\..\draw\..\lv_conf_internal.h

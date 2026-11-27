@@ -1,5 +1,8 @@
 # 调试lvgl遇到的坑
 
+## LTDC 需要开启Register CallBack
+>! cubemx Project Manager 界面中 最右侧Register CallBack栏中找到LTDC开启
+
 ## freertos 中硬件中断的优先级
 freertos 中硬件中断的优先级必须大于8，不然会卡死，freertos做的保护，高于8的抢断任务freertos认为会有危险，
 就主动卡死
@@ -12,6 +15,26 @@ CubeMX 配置 `n` → 寄存器值 = `n << 4`
 - CubeMX 优先级 7 → 寄存器值 = `7 << 4 = 112` → 112 < 128 → 触发 ASSERT
 - CubeMX 优先级 8 → 寄存器值 = `8 << 4 = 128` → 128 >=128 ✅ 合法
 - CubeMX 优先级 10 → `10 <<4 = 160` → 160 >=128 ✅ 合法
+```
+## FreeRTOS不支持osMutexRobust
+>在lv_cmsis_rtos2中不支持osMutexRobust,源码不支持，会mutex创建失败
+```c
+lv_result_t lv_mutex_init(lv_mutex_t * mutex)
+{
+    const osMutexAttr_t Thread_Mutex_attr = {
+        "LVGLMutex",
+        osMutexRecursive | osMutexPrioInherit | 不支持osMutexRobust,//不支持osMutexRobust
+    };
+
+    *mutex = osMutexNew(&Thread_Mutex_attr);
+    if(*mutex == NULL)  {
+        LV_LOG_WARN("Error: failed to create cmsis-rtos mutex");
+        return LV_RESULT_INVALID;
+    }
+
+    return LV_RESULT_OK;
+
+}
 ```
 
 ## lvgl中GPU STM32-DMA2D

@@ -1,0 +1,254 @@
+{
+  "projectId": "project-MW7JHYGHFE1X",
+  "projectName": "test",
+  "projectPath": "C:\\Users\\DKE\\Desktop\\freertos+lvgl+guider\\gui_test\\test",
+  "version": "2.0.1",
+  "toolVendor": "NXP Semiconductors",
+  "createDate": "2026-11-08",
+  "createVersion": "2.0.1",
+  "lastModified": "2026-11-12T06:48:09.724Z",
+  "description": "这是个测试",
+  "metadata": {
+    "board": {
+      "id": 20,
+      "name": "Simulator"
+    },
+    "application": {
+      "id": 3,
+      "name": "BlankTemplate"
+    }
+  },
+  "projectSettings": {
+    "lvglVersion": "9.4.0",
+    "width": 1024,
+    "height": 600,
+    "targetConfig": {
+      "targetRun": false,
+      "targetBuild": false,
+      "toolchainAlias": "simulator",
+      "toolchain": "x86_64-w64-mingw32",
+      "display": "",
+      "colorDepth": 16,
+      "display_name": "test"
+    },
+    "imageConfig": {
+      "storage_type": "CArray",
+      "sd_path": "/sdcard/images/",
+      "flash_address": "0xFFFFFFFFU",
+      "color_format": "RGB565",
+      "aligned": 0,
+      "origin_size": 0,
+      "compress": "RLE",
+      "dither": ""
+    },
+    "fontConfig": {
+      "default_family": "montserratMedium.ttf",
+      "default_size": 14,
+      "enable_base_chars": 1,
+      "base_chars": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    }
+  },
+  "lvConf": {
+    "LV_MEM_SIZE": 320
+  },
+  "UI": {
+    "screen_list": [
+      {
+        "type": "layer_sys",
+        "name": "layer_sys",
+        "id": "layer_sys",
+        "children": []
+      },
+      {
+        "type": "layer_top",
+        "name": "layer_top",
+        "id": "layer_top",
+        "children": []
+      },
+      {
+        "type": "layer_bottom",
+        "name": "layer_bottom",
+        "id": "layer_bottom",
+        "children": []
+      },
+      {
+        "type": "screen",
+        "id": "screen",
+        "name": "screen",
+        "default_screen": true,
+        "style": {
+          "LV_PART_MAIN|LV_STATE_DEFAULT": {
+            "part": "LV_PART_MAIN",
+            "state": "LV_STATE_DEFAULT",
+            "border_side": [],
+            "bg_image_src": "resources/image/bk1.jpg"
+          }
+        },
+        "children": [
+          {
+            "id": "container_MWCUKI286V4W",
+            "type": "container",
+            "name": "container_1",
+            "width": 1024,
+            "width_unit": "px",
+            "height": 50,
+            "height_unit": "px",
+            "x": 0,
+            "x_unit": "px",
+            "y": 550,
+            "y_unit": "px",
+            "align": "LV_ALIGN_TOP_LEFT",
+            "style": {
+              "LV_PART_MAIN|LV_STATE_DEFAULT": {
+                "part": "LV_PART_MAIN",
+                "state": "LV_STATE_DEFAULT",
+                "radius": 0,
+                "bg_color": "#d4e7f6"
+              }
+            },
+            "children": [
+              {
+                "id": "imagebutton_MWCUM4UWYJXI",
+                "type": "imagebutton",
+                "name": "imagebutton_2",
+                "width": 32,
+                "width_unit": "px",
+                "height": 32,
+                "height_unit": "px",
+                "x": -12,
+                "x_unit": "px",
+                "y": -13,
+                "y_unit": "px",
+                "align": "LV_ALIGN_TOP_LEFT",
+                "style": {
+                  "LV_PART_MAIN|LV_STATE_DEFAULT": {
+                    "part": "LV_PART_MAIN",
+                    "state": "LV_STATE_DEFAULT",
+                    "bg_image_src": "resources/image/network_idle_32px_542853_easyicon.png"
+                  }
+                }
+              }
+            ],
+            "scrollbar_mode": "LV_SCROLLBAR_MODE_OFF"
+          },
+          {
+            "id": "imagebutton_MW9ZH7U8HVFN",
+            "type": "imagebutton",
+            "name": "imagebutton_1",
+            "width": 72,
+            "width_unit": "px",
+            "height": 72,
+            "height_unit": "px",
+            "x": 77,
+            "x_unit": "px",
+            "y": 41,
+            "y_unit": "px",
+            "align": "LV_ALIGN_TOP_LEFT",
+            "style": {
+              "LV_PART_MAIN|LV_STATE_DEFAULT": {
+                "part": "LV_PART_MAIN",
+                "state": "LV_STATE_DEFAULT",
+                "border_side": [],
+                "radius": 35,
+                "bg_image_src": "resources/image/computer.png"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "screen_2e36wll",
+        "name": "screen_1",
+        "type": "screen",
+        "style": {
+          "LV_PART_MAIN|LV_STATE_DEFAULT": {
+            "part": "LV_PART_MAIN",
+            "state": "LV_STATE_DEFAULT",
+            "bg_image_src": "resources/image/bk.png"
+          }
+        },
+        "children": [
+          {
+            "id": "button_MWCUYWDTRL4P",
+            "type": "button",
+            "name": "button_1",
+            "width": 100,
+            "width_unit": "px",
+            "height": 50,
+            "height_unit": "px",
+            "x": 896,
+            "x_unit": "px",
+            "y": 535,
+            "y_unit": "px",
+            "align": "LV_ALIGN_TOP_LEFT",
+            "style": {
+              "LV_PART_MAIN|LV_STATE_DEFAULT": {
+                "part": "LV_PART_MAIN",
+                "state": "LV_STATE_DEFAULT"
+              }
+            },
+            "children": [
+              {
+                "id": "label_MWCUYWDTECW6",
+                "type": "label",
+                "name": "button_1_label",
+                "width": 0,
+                "width_unit": "content",
+                "height": 0,
+                "height_unit": "content",
+                "x": 0,
+                "x_unit": "px",
+                "y": 0,
+                "y_unit": "px",
+                "align": "LV_ALIGN_CENTER",
+                "style": {
+                  "LV_PART_MAIN|LV_STATE_DEFAULT": {
+                    "part": "LV_PART_MAIN",
+                    "state": "LV_STATE_DEFAULT",
+                    "text_family": "NotoSerifSC-Medium.otf",
+                    "text_size": 20
+                  }
+                },
+                "text": "返回"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "event_list": {
+      "imagebutton_MW9ZH7U8HVFN": {
+        "LV_EVENT_RELEASED": {
+          "load_screen": {
+            "type": "load_screen",
+            "name": "load_screen",
+            "id": "load_screen",
+            "screen": "screen_2e36wll",
+            "animation": "LV_SCREEN_LOAD_ANIM_NONE",
+            "time": 30,
+            "delay": 0,
+            "is_delete": false
+          }
+        }
+      },
+      "button_MWCUYWDTRL4P": {
+        "LV_EVENT_RELEASED": {
+          "load_screen": {
+            "type": "load_screen",
+            "name": "load_screen",
+            "id": "load_screen",
+            "screen": "screen",
+            "animation": "LV_SCREEN_LOAD_ANIM_NONE",
+            "time": 10,
+            "delay": 0,
+            "is_delete": false
+          }
+        }
+      }
+    },
+    "variable_setting": {
+      "condition": {},
+      "lv_anim_t": {}
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/CMakeFiles/copy_sdl2_dll.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/CMakeFiles/generated.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/CMakeFiles/simulator.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/CMakeFiles/run.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/CMakeFiles/edit_cache.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/CMakeFiles/rebuild_cache.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/CMakeFiles/list_install_components.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/CMakeFiles/install.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/CMakeFiles/install/local.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/lvgl/CMakeFiles/lvgl.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/lvgl/CMakeFiles/edit_cache.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/lvgl/CMakeFiles/rebuild_cache.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/lvgl/CMakeFiles/list_install_components.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/lvgl/CMakeFiles/install.dir
+C:/Users/DKE/Desktop/freertos+lvgl+guider/gui_test/test/platform/simulator/build/lvgl/CMakeFiles/install/local.dir

@@ -1,0 +1,37 @@
+./objects/stm32h7xx_hal_eth.o: \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_eth.c \
+  RTE\LVGL\lv_conf_cmsis.h RTE\_Target_1\RTE_Components.h \
+  RTE\_Target_1\Pre_Include_Global.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Inc\stm32h7xx_hal_conf.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_def.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h7xx.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\CMSIS\Device\ST\STM32H7xx\Include\stm32h753xx.h \
+  D:\software\Keil_v5\pack\ARM\CMSIS\6.4.0\CMSIS\Core\Include\core_cm7.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\CMSIS\Device\ST\STM32H7xx\Include\system_stm32h7xx.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc_ex.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio_ex.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_dma.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_dma_ex.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_mdma.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_dma2d.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_eth.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_eth_ex.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_exti.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_cortex.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_flash.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_flash_ex.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_hsem.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_i2c.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_i2c_ex.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_ltdc.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_ltdc_ex.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pwr.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_pwr_ex.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_sdram.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_fmc.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim.h \
+  STM32CubeMX\Target_1\STM32CubeMX\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_tim_ex.h

@@ -1,0 +1,38 @@
+./objects/lv_font.o: \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\lv_font.c \
+  RTE\LVGL\lv_conf_cmsis.h RTE\_Target_1\RTE_Components.h \
+  RTE\_Target_1\Pre_Include_Global.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\lv_font.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\lv_conf_internal.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\lv_conf_kconfig.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\lv_types.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\..\lv_conf_internal.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\lv_symbol_def.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\lv_draw_buf.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\lv_types.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\lv_area.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\..\lv_conf_internal.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\lv_math.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\lv_color.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\lv_assert.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\lv_log.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\..\stdlib\lv_mem.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\..\stdlib\..\lv_conf_internal.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\..\stdlib\lv_string.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\..\stdlib\..\misc\lv_types.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\lv_palette.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\misc\lv_color_op.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\stdlib\lv_string.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\lv_image_dsc.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\draw\..\lv_conf_internal.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\lv_area.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\lv_text_private.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\lv_text.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\..\font\lv_font.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\..\stdlib\lv_sprintf.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\..\stdlib\..\misc\lv_types.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\lv_utils.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\..\draw\lv_draw_buf.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\lv_log.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\misc\lv_assert.h \
+  D:\software\Keil_v5\pack\LVGL\lvgl\9.4.0\src\font\..\stdlib\lv_string.h

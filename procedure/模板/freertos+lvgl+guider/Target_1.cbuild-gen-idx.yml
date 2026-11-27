@@ -1,0 +1,13 @@
+build-gen-idx:
+  generated-by: uVision version 5.43.1.0
+  generators:
+    - board: 
+      device: STM32H753IITx
+      id: CubeMX
+      output: D:/experience/procedure/Ä£°å/freertos+lvgl+guider/STM32CubeMX/Target_1/
+      project-type: single-core
+      cbuild-gens:
+        - cbuild-gen: D:/experience/procedure/Ä£°å/freertos+lvgl+guider/Project.Target_1.cbuild-gen.yml
+          configuration: .Target_1
+          name: D:/experience/procedure/Ä£°å/freertos+lvgl+guider/STM32CubeMX/Target_1/Project.cgen.yml
+          project: Project
